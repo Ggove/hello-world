@@ -1,0 +1,96 @@
+table{
+  border-collapse: collapse;
+  border: 1px solid #aaa;
+  width: 500px;
+}
+
+tr:last-child td{
+  border-left: none;
+}
+
+tr:last-child td:first-child{
+  border-left: 1px solid #aaa;
+}
+
+th, td{
+  border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  text-align: center;
+  padding: 0 5px;
+  min-width: 30px;
+  height: 30px;
+  white-space: nowrap;
+  text-align:start;
+  vertical-align: top;
+}
+
+td.no-left{
+  border-left: #aaa;
+}
+
+/*  */
+
+ul{
+  position: relative;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  position: relative;
+  list-style-type: none;
+}
+
+.hierarchy ul::before{
+  content: "";
+  display: block;
+  position: absolute;
+  border-left: 3px solid #aaa;
+  top: 0;
+  left: 20px;
+  width: 0;
+  bottom: 14px;
+}
+
+.hierarchy ul li:before {
+content: "";
+display: block;
+position: absolute;
+top: 20px;
+left: 20px;
+width: 70px;
+height: 0;
+border-top: 3px solid #aaa;
+}
+
+.hierarchy{
+  display: inline-block;
+  border: 1px solid #aaa;
+  margin : 30px;
+  padding: 10px;
+  list-style-type: none;
+  font-weight: bold;
+}
+
+/* 位置決め ここを増やす*/
+
+.hierarchy > li, .hierarchy > ul{
+  margin-left: 20px;
+}
+
+.hierarchy > ul > ul{
+  margin-left: 100px;
+}
+
+.hierarchy > li{
+  margin-bottom: 0;
+  padding: 5px 10px;
+}
+
+.hierarchy ul li{
+  margin: 0;
+  padding: 0;
+  padding-left: 100px;
+  padding-top: 10px;
+}

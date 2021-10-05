@@ -1,0 +1,68 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.body{
+  margin: 30px;
+}
+
+div{
+  margin-bottom: 30px;
+}
+
+.title{
+  display: inline-block;
+  background-color: blanchedalmond;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+p{
+  line-height: 1.7rem;
+}
+
+.tag-name{
+  display: inline-block;
+}
+
+.tag-name::before{
+  content: "tag name :";
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+th::after{
+  content: " :";
+  margin-right: 10px;
+}
+
+.description > p{
+  margin-bottom: 10px;
+}
+
+.example::before{
+  content: "example :";
+  display: block;
+  font-weight: bold;
+}
+
+.explanation::before{
+  content: "explanation :";
+  display: block;
+  font-weight: bold;
+}
+
+.image{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.image::before{
+  content: "illustration :";
+  display: block;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
