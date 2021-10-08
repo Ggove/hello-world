@@ -1,0 +1,26 @@
+table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table tr:first-child th{
+  font-size: 1.5rem;
+  border-bottom: 3px solid #aaa;
+}
+
+th, td{
+  border: 1px solid #aaa;
+  padding: 0.2rem 1rem;
+  min-width: 50px;
+  text-align: center;
+  color: #444;
+}
+
+th{
+  font-weight: bold;
+  background-color:antiquewhite;
+}
+
+th[colspan], td[colspan]{
+  text-align: center;
+}

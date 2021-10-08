@@ -4,65 +4,78 @@
 }
 
 .body{
-  margin: 30px;
+  margin: 20px;
 }
 
 div{
   margin-bottom: 30px;
 }
 
-.title{
-  display: inline-block;
-  background-color: blanchedalmond;
-  padding: 5px 10px;
-  font-weight: bold;
-  border-radius: 10px;
-  font-size: 1rem;
-}
-
 p{
   line-height: 1.7rem;
 }
 
-.tag-name{
-  display: inline-block;
+/* title */
+.title{
+  text-align: center;
 }
 
-.tag-name::before{
-  content: "tag name :";
-  margin-right: 10px;
+.title > p:first-child{
+  background-color:bisque;
   font-weight: bold;
+  font-size: 2rem;
+  padding: 10px 10px;
+  border-radius: 10px;
+  color: #666;
 }
 
-th::after{
-  content: " :";
-  margin-right: 10px;
+/* 見出し系 */
+.s-midashi{
+  display: flex;
+}
+
+.s-midashi.table{
+  display: block;
+}
+
+:is(.s-midashi,.l-midashi){
+  align-items: center;
+}
+
+:is(.s-midashi,.l-midashi) > p:first-child{
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #666;
+  padding: 0.5rem;
+}
+
+:is(.s-midashi,.l-midashi) > p:first-child::after{
+  content: ":";
+  margin: 0 10px;
+}
+
+.l-midashi{
+  display: block;
+}
+
+.list{
+  display: flex;
 }
 
 .description > p{
   margin-bottom: 10px;
 }
 
-.example::before{
-  content: "example :";
-  display: block;
-  font-weight: bold;
-}
-
-.explanation::before{
-  content: "explanation :";
-  display: block;
-  font-weight: bold;
-}
-
-.image{
+.illustration{
   margin-top: 50px;
+  font-weight: bold;
   text-align: center;
 }
 
-.image::before{
-  content: "illustration :";
-  display: block;
-  margin-bottom: 20px;
-  font-weight: bold;
+.illustration .image{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 50px;
+  text-align: center;
 }
