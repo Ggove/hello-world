@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hindentタグの説明</title>
+  <link rel="stylesheet" href="../../css/tag_style.css">
+  <link rel="stylesheet" href="../../css/list.css">
+  <link rel="stylesheet" href="../../css/table.css">
+  <link rel="icon" href="../../image/favicon.ico" type="image/vnd.microsoft.icon">
+</head>
+
+<body>
+  <div class="body">
+
+    <div class="title">
+      <p>●hindent</p>
+    </div>
+
+    <div class="definition">
+
+      <div class="tag-name s-midashi plain">
+        <p>tag name</p>
+        <p>hindent</p>
+      </div>
+
+      <div class="tag-attribute-label s-midashi plain">
+        <p>attribute</p>
+        <p>val</p>
+      </div>
+
+      <div class="tag-attribute-value s-midashi list">
+        <p>attribute-value</p>
+        <ul>
+          <li>0em</li>
+          <li>0em00</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="explanation l-midashi">
+      <p>explanation</p>
+      <p>
+        hindentタグは、文章が折り返されたときの折り返しインデントを指定します。
+      </p>
+    </div>
+
+    <div class="example l-midashi">
+      <p>example</p>
+      <p>
+        &lt;hindent val="3em"&gt;これは長い文章です。これは長い長い文章です。これは長い長い長い文章です。長くて退屈な文章です。内容だけは空っぽです。&lt;/hindent&gt;
+      </p>
+    </div>
+
+    <div class="illustration l-midashi">
+      <p>illustration</p>
+      <div class="image">
+        <img src="../../image/hindent.jpg" alt="hindent" />
+      </div>
+    </div>
+
+    <div class="point l-midashi">
+      <p>Point</p>
+      <p>indentタグと組み合わせて使用することが一般的です。例えば次のように書きます。
+      </p>
+      <br>
+      <p>
+        &lt;hindent val="3em"&gt;&lt;indent
+        val="1em"&gt;これは長い文章です。これは長い長い文章です。これは長い長い長い文章です。長くて退屈な文章です。内容だけは空っぽです。&lt;/indent&gt;&lt;/hindent&gt;
+      </p>
+    </div>
+
+    <div class="caution l-midashi">
+      <p>Caution</p>
+      <p>hindentタグはblock要素で、indentタグはinline要素です。組み合わせで使用する場合でも要素の順番を変更することはできません。</p>
+      <br>
+      <p>例えば、下のように書いたとします。</p>
+      <br>
+      <p>&lt;indent val="1em"&gt;&lt;hindent
+        val="3em"&gt;これは長い文章です。これは長い長い文章です。これは長い長い長い文章です。長くて退屈な文章です。内容だけは空っぽです。&lt;/hindent&gt;&lt;/indent&gt;</p>
+      <br>
+      <p>inline要素の中にblock要素は入れることができないため、xhtmlに変換される場合、次のような感じで解釈されます。</p>
+      <br>
+      <p>&lt;indent val="1em"&gt;&lt;/indent&gt;
+        <br>
+        &lt;hindent val="3em"&gt;これは長い文章です。これは長い長い文章です。これは長い長い長い文章です。長くて退屈な文章です。内容だけは空っぽです。&lt;/hindent&gt;
+      </p>
+      <br>
+      <p>このように、inline要素は外にはじかれてしまい、無効となります。</p>
+    </div>
+
+  </div>
+</body>
+
+</html>

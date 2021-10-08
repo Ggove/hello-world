@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>brタグの説明</title>
+  <link rel="stylesheet" href="../../css/tag_style.css">
+  <link rel="stylesheet" href="../../css/list.css">
+  <link rel="stylesheet" href="../../css/table.css">
+  <link rel="icon" href="../../image/favicon.ico" type="image/vnd.microsoft.icon">
+</head>
+
+<body>
+  <div class="body">
+
+    <div class="title">
+      <p>●br</p>
+    </div>
+
+    <div class="definition">
+
+      <div class="tag-name s-midashi list">
+        <p>tag name</p>
+        <ul>
+          <li>br</li>
+        </ul>
+      </div>
+
+      <div class="tag-attribute-label s-midashi list">
+        <p>attribute</p>
+        <ul>
+          <li>なし</li>
+        </ul>
+      </div>
+
+      <div class="tag-attribute-value s-midashi list">
+        <p>attribute-value</p>
+        <ul>
+          <li>なし</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="explanation l-midashi">
+      <p>explanation</p>
+      <p>
+        brタグは文章等の改行で使用します。inline要素のため、改行しても書式を引き継ぎます。
+      </p>
+    </div>
+
+    <div class="example l-midashi">
+      <p>example</p>
+      <p>
+        &lt;p style="color: #ff0000"&gt;一つ目の文章です。&lt;/p&gt;
+        <br>
+        &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+        <br>
+        &lt;p&gt;二つ目の文章です。&lt;/p&gt;
+        <br>
+        <br>
+        &lt;p style="color: #ff0000"&gt;一つ目の文章です。&lt;br /&gt;二つ目の文章です。&lt;/p&gt;
+      </p>
+    </div>
+
+    <div class="illustration l-midashi">
+      <p>illustration</p>
+      <div class="image">
+        <img src="../../image/br.jpg" alt="br" />
+      </div>
+    </div>
+
+    <div class="caution l-midashi">
+      <p>Caution</p>
+      <p>現コンバータの環境では、
+        <br>
+        &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+        <br>
+        が空白行を表しています。
+      </p>
+      <br>
+      <p>
+        以下の二つの理由によりそのような書き方になります。
+      </p>
+      <ul>
+        <li>&lt;p&gt;&lt;/p&gt;がコンバート後に&lt;p /&gt;となってしまうこと</li>
+        <li>&lt;br&gt;と&lt;/br&gt;がコンバート後に無効となってしまうこと</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+
+</html>

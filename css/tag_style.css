@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body{
+  background-color: #FFFFF3;
+}
+
 .body{
   margin: 20px;
 }
@@ -58,10 +62,57 @@ p{
   display: block;
 }
 
+/* list系 */
 .list{
   display: flex;
 }
 
+.list :is(ul,li){
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.list ul{
+  /* margin-left: 10px; */
+}
+
+.list li:not(:last-child){
+  margin-right: 10px;
+}
+
+.list li:not(:last-child)::after{
+  content: ",";
+}
+
+/* table系 */
+.table-yoko{
+  display: block;
+  box-sizing: border-box;
+}
+
+.table-yoko tr:first-child th{
+  border: 1px solid #666;
+  border-right: 2px solid #666;
+}
+
+.table-yoko tbody{
+  display: flex;
+}
+
+.table-yoko  tr{
+  display: flex;
+  flex-direction: column;
+}
+
+.table-yoko :is(th,td){
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+/* その他 */
 .description > p{
   margin-bottom: 10px;
 }
@@ -70,6 +121,7 @@ p{
   margin-top: 50px;
   font-weight: bold;
   text-align: center;
+  border: 2px dashed #ddd;
 }
 
 .illustration .image{
@@ -78,4 +130,12 @@ p{
   justify-content: space-around;
   margin-top: 50px;
   text-align: center;
+}
+
+.caution p:first-child{
+  color: lightcoral;
+}
+
+.point p:first-child{
+  color:tan;
 }
