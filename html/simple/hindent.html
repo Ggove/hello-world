@@ -75,21 +75,14 @@
 
     <div class="caution l-midashi">
       <p>Caution</p>
-      <p>hindentタグはblock要素で、indentタグはinline要素です。組み合わせで使用する場合でも要素の順番を変更することはできません。</p>
+      <p>hindentタグとindentタグを逆順にして使用することはできません。プロパティの書き換え順で最終的な値が変更されてしまうからです。</p>
       <br>
       <p>例えば、下のように書いたとします。</p>
       <br>
       <p>&lt;indent val="1em"&gt;&lt;hindent
         val="3em"&gt;これは長い文章です。これは長い長い文章です。これは長い長い長い文章です。長くて退屈な文章です。内容だけは空っぽです。&lt;/hindent&gt;&lt;/indent&gt;</p>
       <br>
-      <p>inline要素の中にblock要素は入れることができないため、xhtmlに変換される場合、次のような感じで解釈されます。</p>
-      <br>
-      <p>&lt;indent val="1em"&gt;&lt;/indent&gt;
-        <br>
-        &lt;hindent val="3em"&gt;これは長い文章です。これは長い長い文章です。これは長い長い長い文章です。長くて退屈な文章です。内容だけは空っぽです。&lt;/hindent&gt;
-      </p>
-      <br>
-      <p>このように、inline要素は外にはじかれてしまい、無効となります。</p>
+      <p>これは、text-indentプロパティをhindentが上書きしたことによる現象です。これによってindentタグの効力がなくなっています。</p>
     </div>
 
   </div>
