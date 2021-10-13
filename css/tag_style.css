@@ -16,7 +16,7 @@ body{
 }
 
 div{
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
 }
 
 p{
@@ -25,7 +25,7 @@ p{
 
 /* 囲み */
 .group{
-  padding: 1rem;
+  padding: 0 1rem;
   border: 2px solid #ddd;
   border-radius: 7px;
 }
@@ -59,8 +59,10 @@ header img{
   font-weight: bold;
 }
 
-/* code */
-
+/* chapter */
+.chapter{
+  margin: 2rem 0;
+}
 
 /* title */
 .title{
@@ -77,32 +79,36 @@ header img{
 }
 
 /* 見出し系 */
-.s-midashi{
+.midashi-inline{
   display: flex;
 }
 
-.s-midashi.table{
+.midashi-inline.table{
   display: block;
 }
 
-:is(.s-midashi,.l-midashi){
+:is(.midashi-inline,.midashi-block){
   align-items: center;
   margin: 2rem 0;
 }
 
-:is(.s-midashi,.l-midashi) > p:first-child{
+.midashi-block p:first-child{
+  margin-bottom: 0.5rem;
+}
+
+:is(.midashi-inline,.midashi-block) > p:first-child{
   font-weight: bold;
   font-size: 1.5rem;
   color: #666;
-  padding: 0.5rem;
+  margin-left: 1rem;
 }
 
-:is(.s-midashi,.l-midashi) > p:first-child::after{
+:is(.midashi-inline,.midashi-block) > p:first-child::after{
   content: ":";
-  margin: 0 10px;
+  margin: 0 1rem;
 }
 
-.l-midashi{
+.midashi-block{
   display: block;
 }
 
@@ -116,18 +122,30 @@ header img{
   padding: 0;
   list-style: none;
   display: flex;
+  color: #666;
 }
 
 .list ul{
-  /* margin-left: 10px; */
+  align-items: center;
+  margin-left: 1rem;
 }
 
 .list li:not(:last-child){
-  margin-right: 10px;
+  margin-right: 1rem;
 }
 
-.list li:not(:last-child)::after{
+.list li:not(:last-child,:first-child)::after{
   content: ",";
+}
+
+.list li:first-child{
+  font-size: 150%;
+  font-weight: bold;
+}
+
+.list li:first-child::after{
+  content: ":";
+  margin-left: 1rem;
 }
 
 .flexlist ul{
@@ -175,6 +193,11 @@ header img{
   margin-bottom: 10px;
 }
 
+/* explanation */
+.sentence p{
+  margin: 0 1rem;
+}
+
 .border-top-dashed{
   border-top: 2px dashed #ddd;
 }
@@ -183,14 +206,23 @@ header img{
   margin-top: 50px;
   font-weight: bold;
   text-align: center;
+  box-sizing: border-box;
+
 }
 
 .illustration .image{
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
   margin-top: 50px;
   text-align: center;
+}
+
+.illustration .image img{
+  max-width: 100%;
+  height: auto;
+  margin: 1rem auto;
 }
 
 .image-block{

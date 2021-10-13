@@ -5,38 +5,82 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Bousenの説明</title>
   <link rel="stylesheet" href="../../css/tag_style.css">
+  <link rel="stylesheet" href="../../css/list.css">
+  <link rel="stylesheet" href="../../css/table.css">
+  <link rel="stylesheet" href="../../css/navigation.css">
   <link rel="icon" href="../../image/favicon.ico" type="image/vnd.microsoft.icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 </head>
 
 <body>
+
+  <header>
+    <div class="header-logo">
+      <p><a href="../../html/simple/index.html">
+          <img src="../../image/Yznet_Specification.png" alt="Yznet_Specification" />
+        </a></p>
+    </div>
+    <div class="header-nav toggle_btn">
+      <img src="../../image/barcode.png" alt="barcode" />
+    </div>
+  </header>
+
   <div class="body">
 
-    <div class="title"><span>●bousen</span></div>
-
-    <div class="definition">
-      <p class="tag-name">bousen</p>
-      <table class="tag-attribute-label">
-        <tr>
-          <th>attribute</th>
-          <td>line</td>
-        </tr>
-      </table>
-      <table class="tag-attribute-value">
-        <tr>
-          <th>attribute-value</th>
-          <td>inside</td>
-          <td>outside</td>
-        </tr>
-      </table>
+    <div class="aside nav-title">
+      <!-- jQuery -->
     </div>
 
-    <div class="description">
-      <p class="explanation">
-        bousenタグは、文字の上下近傍に線を引きます(傍点)。
-      </p>
-      <div class="example">
+    <div class="mask"></div>
+
+    <div class="title">
+      <p>bousen</p>
+    </div>
+
+    <div class="explanation sentence midashi-block">
+      <p>説明</p>
+      <p>bousenタグは、文字の上下近傍に線を引きます(傍点)。</p>
+    </div>
+
+    <div class="definition-nav nav">
+      <p>property</p>
+    </div>
+    <div class="definition group">
+
+      <div class="tag-name list chapter">
+        <ul>
+          <li>タグ名称</li>
+          <li>bousen</li>
+        </ul>
+      </div>
+
+
+
+      <div class="tag-attribute-label list chapter">
+        <ul>
+          <li>属性</li>
+          <li>line</li>
+        </ul>
+      </div>
+
+      <div class="tag-attribute-value list chapter">
+        <ul>
+          <li>属性値</li>
+          <li>inside</li>
+          <li>outside</li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="example-nav nav">
+      <p>example</p>
+    </div>
+    <div class="description group">
+      <div class="code sentence midashi-block border-top-dashed chapter">
+        <p>Code</p>
         <p>
           &lt;p&gt;Neque porro &lt;bousen line="inside"&gt;quisquam&lt;/bousen&gt; est qui &lt;bousen
           line="outside"&gt;dolorem&lt;/bousen&gt; ipsum quia dolor sit amet, consectetur, adipisci velit.&lt;/p&gt;
@@ -45,8 +89,8 @@
           line="outside"&gt;悲しみ&lt;/bousen&gt;であるという理由で愛する者や、それゆえ得ようとする者は、どこにもいない。&lt;/p&gt;
         </p>
       </div>
-      <div class="illustration">
-        <p>illustration :</p>
+      <div class="illustration midashi-block border-top-dashed chapter">
+        <p>illustration</p>
         <div class="image">
           <img src="../../image/bousen_hltr.jpg" alt="bousen_hltr" />
           <img src="../../image/bousen_vrtl.jpg" alt="bousen_vrtl">
@@ -55,6 +99,13 @@
     </div>
 
   </div>
+  <!-- js読み込み-->
+  <script>
+    window.onload = function () {
+      $('.aside.nav-title').load('aside.html');
+    }
+  </script>
+  <script src="../../javascript/index.js"></script>
 </body>
 
 </html>

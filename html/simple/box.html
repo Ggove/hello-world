@@ -5,79 +5,102 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>boxタグの説明</title>
   <link rel="stylesheet" href="../../css/tag_style.css">
   <link rel="stylesheet" href="../../css/list.css">
   <link rel="stylesheet" href="../../css/table.css">
+  <link rel="stylesheet" href="../../css/navigation.css">
   <link rel="icon" href="../../image/favicon.ico" type="image/vnd.microsoft.icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 </head>
 
 <body>
+
+  <header>
+    <div class="header-logo">
+      <p><a href="../../html/simple/index.html">
+          <img src="../../image/Yznet_Specification.png" alt="Yznet_Specification" />
+        </a></p>
+    </div>
+    <div class="header-nav toggle_btn">
+      <img src="../../image/barcode.png" alt="barcode" />
+    </div>
+  </header>
+
   <div class="body">
 
-    <div class="title">
-      <p>●box</p>
+    <div class="aside nav-title">
+      <!-- jQuery -->
     </div>
 
-    <div class="definition">
+    <div class="mask"></div>
 
-      <div class="tag-name s-midashi list">
-        <p>tag name</p>
+    <div class="title">
+      <p>box</p>
+    </div>
+
+    <div class="explanation sentence midashi-block">
+      <p>説明</p>
+      <p>
+        boxタグは、細かな装飾をするなど、汎用的な機能を集めたタグです。<br>
+        &lt;box level="inline"&gt;でspan系のタグに、<br>
+        &lt;box level="block"&gt;でdiv系のタグになります。
+      </p>
+    </div>
+
+    <div class="definition-nav nav">property</div>
+    <div class="definition group">
+
+      <div class="tag-name list chapter">
         <ul>
+          <li>タグ名称</li>
           <li>box</li>
         </ul>
       </div>
 
-      <div class="tag-attribute-label s-midashi list">
-        <p>attribute</p>
+      <div class="tag-attribute-label list chapter">
         <ul>
+          <li>属性</li>
           <li>下記テーブル参照</li>
         </ul>
       </div>
 
-      <div class="tag-attribute-value s-midashi list">
-        <p>attribute-value</p>
+      <div class="tag-attribute-value list chapter">
         <ul>
+          <li>属性値</li>
           <li>下記テーブル参照</li>
         </ul>
       </div>
 
     </div>
+    <div class="example-nav nav">example</div>
+    <div class="example-body group">
+      <div class="code sentence midashi-block border-top-dashed chapter">
+        <p>Code</p>
+        <p>
+          &lt;p&gt;Neque porro &lt;box level="inline" margin="1em" border="solid" bold="yes" color="ff0000"&gt;quisquam
+          est qui
+          dolorem&lt;/box&gt; ipsum quia dolor sit amet, consectetur, adipisci velit.&lt;/p&gt;
+          <br>
+          &lt;p&gt;同様に、悲しみそのもの&lt;box level="inline" margin="1em" border="solid" bold="yes"
+          color="ff0000"&gt;を、それが悲しみであるという理由で愛する者&lt;/box&gt;や、それゆえ得ようとする者は、どこにもいない。&lt;/p&gt;
+          <br>
+          &lt;p&gt;同様に、悲しみそのもの&lt;box level="block" margin="1em" border="solid" bold="yes"
+          color="ff0000"&gt;を、それが悲しみであるという理由で愛する者&lt;/box&gt;や、それゆえ得ようとする者は、どこにもいない。&lt;/p&gt;
+        </p>
+      </div>
 
-    <div class="explanation l-midashi">
-      <p>explanation</p>
-      <p>
-        boxタグは、細かな装飾をするなど、汎用的な機能を集めたタグです。<br>
-        &lt;box level="inline"&gt;でspan系のタグに、<br>
-        &lt;box level="block"&gt;でdiv系のタグになります。<br>
-        クラス指定のため、制限があります。より柔軟な表現が必要になる場合には「div」,「span」タグをご使用ください。
-      </p>
-    </div>
-
-    <div class="example l-midashi">
-      <p>example</p>
-      <p>
-        &lt;p&gt;Neque porro &lt;box level="inline" margin="1em" border="solid" bold="yes" color="ff0000"&gt;quisquam
-        est qui
-        dolorem&lt;/box&gt; ipsum quia dolor sit amet, consectetur, adipisci velit.&lt;/p&gt;
-        <br>
-        &lt;p&gt;同様に、悲しみそのもの&lt;box level="inline" margin="1em" border="solid" bold="yes"
-        color="ff0000"&gt;を、それが悲しみであるという理由で愛する者&lt;/box&gt;や、それゆえ得ようとする者は、どこにもいない。&lt;/p&gt;
-        <br>
-        &lt;p&gt;同様に、悲しみそのもの&lt;box level="block" margin="1em" border="solid" bold="yes"
-        color="ff0000"&gt;を、それが悲しみであるという理由で愛する者&lt;/box&gt;や、それゆえ得ようとする者は、どこにもいない。&lt;/p&gt;
-      </p>
-    </div>
-
-    <div class="illustration l-midashi">
-      <p>illustration</p>
-      <div class="image">
-        <img src="../../image/box_hltr.jpg" alt="box_hltr" />
-        <img src="../../image/box_vrtl.jpg" alt="box_vrtl">
+      <div class="illustration midashi-block border-top-dashed chapter">
+        <p>illustration</p>
+        <div class="image">
+          <img src="../../image/box_hltr.jpg" alt="box_hltr" />
+          <img src="../../image/box_vrtl.jpg" alt="box_vrtl">
+        </div>
       </div>
     </div>
 
-    <div class="definition l-midashi">
+    <div class="definition midashi-block">
       <p>boxの属性と値</p>
       <table>
         <tr>
@@ -289,6 +312,13 @@
     </div>
 
   </div>
+  <!-- js読み込み-->
+  <script>
+    window.onload = function () {
+      $('.aside.nav-title').load('aside.html');
+    }
+  </script>
+  <script src="../../javascript/index.js"></script>
 </body>
 
 </html>

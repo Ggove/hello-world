@@ -5,65 +5,111 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>bousenタグの説明</title>
   <link rel="stylesheet" href="../../css/tag_style.css">
+  <link rel="stylesheet" href="../../css/list.css">
+  <link rel="stylesheet" href="../../css/table.css">
+  <link rel="stylesheet" href="../../css/navigation.css">
   <link rel="icon" href="../../image/favicon.ico" type="image/vnd.microsoft.icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 </head>
 
 <body>
+
+  <header>
+    <div class="header-logo">
+      <p><a href="../../html/simple/index.html">
+          <img src="../../image/Yznet_Specification.png" alt="Yznet_Specification" />
+        </a></p>
+    </div>
+    <div class="header-nav toggle_btn">
+      <img src="../../image/barcode.png" alt="barcode" />
+    </div>
+  </header>
+
   <div class="body">
 
-    <div class="title"><span>●bouten</span></div>
-
-    <div class="definition">
-      <p class="tag-name">bouten</p>
-      <table class="tag-attribute-label">
-        <tr>
-          <th>attribute</th>
-          <td>type</td>
-        </tr>
-      </table>
-      <table class="tag-attribute-value">
-        <tr>
-          <th>attribute-value</th>
-          <td>sesame</td>
-          <td>sesameopen</td>
-          <td>dot</td>
-          <td>dotopen</td>
-          <td>circle</td>
-          <td>circleopen</td>
-          <td>doublecircle</td>
-          <td>doublecircleopen</td>
-          <td>triangle</td>
-          <td>triangleopen</td>
-        </tr>
-      </table>
+    <div class="aside nav-title">
+      <!-- jQuery -->
     </div>
 
-    <div class="description">
-      <p class="explanation">
+    <div class="mask"></div>
+
+    <div class="title">
+      <p>bouten</p>
+    </div>
+
+    <div class="explanation sentence midashi-block">
+      <p>説明</p>
+      <p>
         boutenタグは、文字の上に小さめに表示します(傍点)。主に強調目的などで利用されます。
       </p>
-      <div class="example">
+    </div>
+
+    <div class="definition-nav nav">property</div>
+    <div class="definition group">
+
+      <div class="tag-name list chapter">
+        <ul>
+          <li>タグ名称</li>
+          <li>bouten</li>
+        </ul>
+      </div>
+
+      <div class="tag-attribute-label list chapter">
+        <ul>
+          <li>属性</li>
+          <li>type</li>
+        </ul>
+      </div>
+      <div class="tag-attribute-value midashi-block table chapter">
+        <p>属性値</p>
+        <table>
+          <tr>
+            <td>sesame</td>
+            <td>sesameopen</td>
+            <td>dot</td>
+            <td>dotopen</td>
+            <td>circle</td>
+          </tr>
+          <tr>
+            <td>circleopen</td>
+            <td>doublecircle</td>
+            <td>doublecircleopen</td>
+            <td>triangle</td>
+            <td>triangleopen</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="example-nav nav">example</div>
+    <div class="example-body group">
+      <div class="code sentence midashi-block border-top-dashed chapter">
+        <p>Code</p>
         <p>
           &lt;p&gt;Neque &lt;bouten type="sesame"&gt;porro&lt;/bouten&gt; &lt;bouten
           type="dot"&gt;quisquam&lt;/bouten&gt;
-          &lt;bouten type="circle"&gt;est&lt;/bouten&gt; &lt;bouten type="doublecircle"&gt;qui&lt;/bouten&gt; &lt;bouten
+          &lt;bouten type="circle"&gt;est&lt;/bouten&gt; &lt;bouten type="doublecircle"&gt;qui&lt;/bouten&gt;
+          &lt;bouten
           type="triangle"&gt;dolorem&lt;/bouten&gt; ipsum quia dolor sit amet...&lt;/p&gt;
-          <br>
+          <br><br>
           &lt;p&gt;同様に、&lt;bouten type="sesame"&gt;悲しみそのもの&lt;/bouten&gt;を、&lt;bouten
           type="dot"&gt;それ&lt;/bouten&gt;が悲しみであるという&lt;bouten type="circle"&gt;理由&lt;/bouten&gt;で愛する者や、&lt;bouten
           type="doublecircle"&gt;それ&lt;/bouten&gt;ゆえ&lt;bouten
           type="triangle"&gt;得よう&lt;/bouten&gt;とするものはどこにもいない。&lt;/p&gt;
         </p>
       </div>
-      <div class="illustration">
-        <p>illustration :</p>
+
+      <div class="illustration midashi-block border-top-dashed chapter">
+        <p>illustration</p>
         <div class="image">
           <img src="../../image/bouten_hltr.jpg" alt="bouten_hltr" />
           <img src="../../image/bouten_vrtl.jpg" alt="bouten_vrtl">
         </div>
       </div>
+
     </div>
 
   </div>

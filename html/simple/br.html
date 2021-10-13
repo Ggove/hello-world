@@ -9,70 +9,96 @@
   <link rel="stylesheet" href="../../css/tag_style.css">
   <link rel="stylesheet" href="../../css/list.css">
   <link rel="stylesheet" href="../../css/table.css">
+  <link rel="stylesheet" href="../../css/navigation.css">
   <link rel="icon" href="../../image/favicon.ico" type="image/vnd.microsoft.icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 </head>
 
 <body>
+
+  <header>
+    <div class="header-logo">
+      <p><a href="../../html/simple/index.html">
+          <img src="../../image/Yznet_Specification.png" alt="Yznet_Specification" />
+        </a></p>
+    </div>
+    <div class="header-nav toggle_btn">
+      <img src="../../image/barcode.png" alt="barcode" />
+    </div>
+  </header>
+
   <div class="body">
 
-    <div class="title">
-      <p>●br</p>
+    <div class="aside nav-title">
+      <!-- jQuery -->
     </div>
 
-    <div class="definition">
+    <div class="mask"></div>
 
-      <div class="tag-name s-midashi list">
-        <p>tag name</p>
+    <div class="title">
+      <p>br</p>
+    </div>
+
+    <div class="explanation sentence midashi-block">
+      <p>説明</p>
+      <p>
+        aタグはhrefの指定urlに飛ぶリンクを作成します。
+      </p>
+    </div>
+    <div class="definition-nav nav">property</div>
+    <div class="definition group">
+
+      <div class="tag-name list chapter">
         <ul>
+          <li>タグ名称</li>
           <li>br</li>
         </ul>
       </div>
 
-      <div class="tag-attribute-label s-midashi list">
-        <p>attribute</p>
+      <div class="tag-attribute-label list chapter">
         <ul>
+          <li>属性</li>
           <li>なし</li>
         </ul>
       </div>
 
-      <div class="tag-attribute-value s-midashi list">
-        <p>attribute-value</p>
+      <div class="tag-attribute-value list chapter">
         <ul>
+          <li>属性値</li>
           <li>なし</li>
         </ul>
       </div>
 
     </div>
 
-    <div class="explanation l-midashi">
-      <p>explanation</p>
-      <p>
-        brタグは文章等の改行で使用します。inline要素のため、改行しても書式を引き継ぎます。
-      </p>
-    </div>
+    <div class="example-nav nav">example</div>
+    <div class="example-body group">
 
-    <div class="example l-midashi">
-      <p>example</p>
-      <p>
-        &lt;p style="color: #ff0000"&gt;一つ目の文章です。&lt;/p&gt;
-        <br>
-        &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-        <br>
-        &lt;p&gt;二つ目の文章です。&lt;/p&gt;
-        <br>
-        <br>
-        &lt;p style="color: #ff0000"&gt;一つ目の文章です。&lt;br /&gt;二つ目の文章です。&lt;/p&gt;
-      </p>
-    </div>
-
-    <div class="illustration l-midashi">
-      <p>illustration</p>
-      <div class="image">
-        <img src="../../image/br.jpg" alt="br" />
+      <div class="code sentence midashi-block border-top-dashed chapter">
+        <p>example</p>
+        <p>
+          &lt;p style="color: #ff0000"&gt;一つ目の文章です。&lt;br /&gt;二つ目の文章です。&lt;/p&gt;
+          <br>
+          <br>
+          &lt;p style="color: #ff0000"&gt;一つ目の文章です。&lt;/p&gt;
+          <br>
+          &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+          <br>
+          &lt;p&gt;二つ目の文章です。&lt;/p&gt;
+        </p>
       </div>
+
+      <div class="illustration midashi-block border-top-dashed chapter">
+        <p>illustration</p>
+        <div class="image">
+          <img src="../../image/br.jpg" alt="br" />
+        </div>
+      </div>
+
     </div>
 
-    <div class="caution l-midashi">
+    <div class="caution sentence midashi-block">
       <p>Caution</p>
       <p>現コンバータの環境では、
         <br>
@@ -84,13 +110,18 @@
       <p>
         以下の二つの理由によりそのような書き方になります。
       </p>
-      <ul>
-        <li>&lt;p&gt;&lt;/p&gt;がコンバート後に&lt;p /&gt;となってしまうこと</li>
-        <li>&lt;br&gt;と&lt;/br&gt;がコンバート後に無効となってしまうこと</li>
-      </ul>
+      <p>●&lt;p&gt;&lt;/p&gt;がコンバート後に&lt;p /&gt;となってしまうこと</p>
+      <p>●&lt;br&gt;と&lt;/br&gt;がコンバート後に無効となってしまうこと</p>
     </div>
 
   </div>
+  <!-- js読み込み-->
+  <script>
+    window.onload = function () {
+      $('.aside.nav-title').load('aside.html');
+    }
+  </script>
+  <script src="../../javascript/index.js"></script>
 </body>
 
 </html>

@@ -9,24 +9,37 @@
   <link rel="stylesheet" href="../../css/tag_style.css">
   <link rel="stylesheet" href="../../css/list.css">
   <link rel="stylesheet" href="../../css/table.css">
+  <link rel="stylesheet" href="../../css/navigation.css">
   <link rel="icon" href="../../image/favicon.ico" type="image/vnd.microsoft.icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
 
   <header>
-    <p><a href="../../html/simple/index.html">
-        <img src="../../image/Yznet_Specification.png" alt="Yznet_Specification" />
-      </a></p>
+    <div class="header-logo">
+      <p><a href="../../html/simple/index.html">
+          <img src="../../image/Yznet_Specification.png" alt="Yznet_Specification" />
+        </a></p>
+    </div>
+    <div class="header-nav toggle_btn">
+      <img src="../../image/barcode.png" alt="barcode" />
+    </div>
   </header>
 
   <div class="body">
+
+    <div class="aside nav-title">
+      <!-- jQuery -->
+    </div>
+
+    <div class="mask"></div>
 
     <div class="title">
       <p>bookinfo</p>
     </div>
 
-    <div class="explanation l-midashi">
+    <div class="explanation midashi-block">
       <p>説明</p>
       <p>
         bookinfoタグは、論理目次を生成します。その際、タグで囲んだテキストを本文と論理目次に記述します。
@@ -38,32 +51,32 @@
     </div>
     <div class="definition group">
 
-      <div class="tag-name s-midashi plain">
+      <div class="tag-name midashi-inline plain">
         <p>タグ名称</p>
         <p>bookinfo</p>
       </div>
 
-      <div class="tag-attribute-label s-midashi plain">
+      <div class="tag-attribute-label midashi-inline plain">
         <p>属性</p>
         <p>なし</p>
       </div>
 
-      <div class="tag-attribute-value s-midashi plain">
+      <div class="tag-attribute-value midashi-inline plain">
         <p>属性値</p>
         <p>なし</p>
       </div>
 
-      <div class="translation s-midashi plain">
+      <div class="translation midashi-inline plain">
         <p>xml変形</p>
         <p>metadata</p>
       </div>
 
-      <div class="stylesheet-property s-midashi plain">
+      <div class="stylesheet-property midashi-inline plain">
         <p>スタイルシートプロパティ</p>
         <p>なし</p>
       </div>
 
-      <div class="child-notes l-midashi flexlist">
+      <div class="child-notes midashi-block flexlist">
         <p>配下タグ</p>
         <ul>
           <li>seriesname</li>
@@ -97,7 +110,7 @@
 
     <div class="example-nav nav">example</div>
     <div class="example-body group">
-      <div class="code l-midashi border-top-dashed">
+      <div class="code midashi-block border-top-dashed">
         <p>Code</p>
         <p>
           &lt;bookinfo&gt;
@@ -160,7 +173,7 @@
 
     </div>
 
-    <div class="point l-midashi">
+    <div class="point midashi-block">
       <p>Point</p>
       <p>ほとんどのオプションが決まっているため、コピペで対応可。<br>ただし、maintitlename, maintitlekana, creatorname, creatorkana, publishername,
         publisherkanaは毎回変わるので入力すること。
@@ -168,6 +181,13 @@
     </div>
 
   </div>
+  <!-- js読み込み-->
+  <script>
+    window.onload = function () {
+      $('.aside.nav-title').load('aside.html');
+    }
+  </script>
+  <script src="../../javascript/index.js"></script>
 </body>
 
 </html>
