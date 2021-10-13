@@ -5,22 +5,35 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>text-alignタグ群の説明</title>
+  <title>alignタグ群の説明</title>
   <link rel="stylesheet" href="../../css/tag_style.css">
   <link rel="stylesheet" href="../../css/list.css">
   <link rel="stylesheet" href="../../css/table.css">
+  <link rel="stylesheet" href="../../css/navigation.css">
   <link rel="icon" href="../../image/favicon.ico" type="image/vnd.microsoft.icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
 
   <header>
-    <p><a href="../../html/simple/index.html">
-        <img src="../../image/Yznet_Specification.png" alt="Yznet_Specification" />
-      </a></p>
+    <div class="header-logo">
+      <p><a href="../../html/simple/index.html">
+          <img src="../../image/Yznet_Specification.png" alt="Yznet_Specification" />
+        </a></p>
+    </div>
+    <div class="header-nav toggle_btn">
+      <img src="../../image/barcode.png" alt="barcode" />
+    </div>
   </header>
 
   <div class="body">
+
+    <div class="aside nav-title">
+      <!-- jQuery -->
+    </div>
+
+    <div class="mask"></div>
 
     <div class="title">
       <p>alignjustify, alignstart, alignend, aligncenter</p>
@@ -38,10 +51,12 @@
         aligncenterタグは、行中揃えに使用します。
       </p>
     </div>
-    <div class="definition-nav">
+
+    <div class="definition-nav nav">
       <p>property</p>
     </div>
-    <div class="definition">
+
+    <div class="definition group">
 
       <div class="tag-name s-midashi list">
         <p>タグ名称</p>
@@ -82,66 +97,78 @@
 
     </div>
 
-    <div class="example l-midashi">
-      <p>example</p>
-      <p>
-        &lt;alignjustify&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur corporis maiores animi
-        totam
-        dolores consequuntur aut molestias repellat illo aperiam labore doloribus, recusandae quaerat iste blanditiis
-        eius vel
-        exercitationem est?&lt;/alignjustify&gt;
-        <br>
-        &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-        <br>
-        &lt;alignstart&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur corporis maiores animi
-        totam
-        dolores consequuntur aut molestias repellat illo aperiam labore doloribus, recusandae quaerat iste blanditiis
-        eius vel
-        exercitationem est?&lt;/alignstart&gt;
-        <br>
-        &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-        <br>
-        &lt;alignend&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur corporis maiores animi
-        totam
-        dolores consequuntur aut molestias repellat illo aperiam labore doloribus, recusandae quaerat iste blanditiis
-        eius vel
-        exercitationem est?&lt;/alignend&gt;
-        <br>
-        &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-        <br>
-        &lt;aligncenter&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur corporis maiores animi
-        totam
-        dolores consequuntur aut molestias repellat illo aperiam labore doloribus, recusandae quaerat iste blanditiis
-        eius vel
-        exercitationem est?&lt;/aligncenter&gt;
-        <br>
-        &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-        <br>
-        &lt;alignjustify&gt;安田島には安田さん、佐藤さん、森さんがいます。佐藤さんと森さんは奇癖を持っています。佐藤さんは自らを「Kevin」と呼んでくれと言い、森さんは自らを「morris」と呼んでくれと言います。二人とも気持ち悪いです。&lt;/alignjustify&gt;
-        <br>
-        &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-        <br>
-        &lt;alignstart&gt;安田島には安田さん、佐藤さん、森さんがいます。佐藤さんと森さんは奇癖を持っています。佐藤さんは自らを「Kevin」と呼んでくれと言い、森さんは自らを「morris」と呼んでくれと言います。二人とも気持ち悪いです。&lt;/alignstart&gt;
-        <br>
-        &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-        <br>
-        &lt;alignend&gt;安田島には安田さん、佐藤さん、森さんがいます。佐藤さんと森さんは奇癖を持っています。佐藤さんは自らを「Kevin」と呼んでくれと言い、森さんは自らを「morris」と呼んでくれと言います。二人とも気持ち悪いです。&lt;/alignend&gt;
-        <br>
-        &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-        <br>
-        &lt;aligncenter&gt;安田島には安田さん、佐藤さん、森さんがいます。佐藤さんと森さんは奇癖を持っています。佐藤さんは自らを「Kevin」と呼んでくれと言い、森さんは自らを「morris」と呼んでくれと言います。二人とも気持ち悪いです。&lt;/aligncenter&gt;
-      </p>
-    </div>
-
-    <div class="illustration l-midashi">
-      <p>illustration</p>
-      <div class="image">
-        <img src="../../image/align1.jpg" alt="align-en" />
-        <img src="../../image/align2.jpg" alt="align-jp" />
+    <div class="example-nav nav">example</div>
+    <div class="example-body group">
+      <div class="example l-midashi border-top-dashed">
+        <p>Code</p>
+        <p>
+          &lt;alignjustify&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur corporis maiores
+          animi
+          totam
+          dolores consequuntur aut molestias repellat illo aperiam labore doloribus, recusandae quaerat iste blanditiis
+          eius vel
+          exercitationem est?&lt;/alignjustify&gt;
+          <br>
+          &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+          <br>
+          &lt;alignstart&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur corporis maiores animi
+          totam
+          dolores consequuntur aut molestias repellat illo aperiam labore doloribus, recusandae quaerat iste blanditiis
+          eius vel
+          exercitationem est?&lt;/alignstart&gt;
+          <br>
+          &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+          <br>
+          &lt;alignend&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur corporis maiores animi
+          totam
+          dolores consequuntur aut molestias repellat illo aperiam labore doloribus, recusandae quaerat iste blanditiis
+          eius vel
+          exercitationem est?&lt;/alignend&gt;
+          <br>
+          &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+          <br>
+          &lt;aligncenter&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur corporis maiores animi
+          totam
+          dolores consequuntur aut molestias repellat illo aperiam labore doloribus, recusandae quaerat iste blanditiis
+          eius vel
+          exercitationem est?&lt;/aligncenter&gt;
+          <br>
+          &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+          <br>
+          &lt;alignjustify&gt;安田島には安田さん、佐藤さん、森さんがいます。佐藤さんと森さんは奇癖を持っています。佐藤さんは自らを「Kevin」と呼んでくれと言い、森さんは自らを「morris」と呼んでくれと言います。二人とも気持ち悪いです。&lt;/alignjustify&gt;
+          <br>
+          &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+          <br>
+          &lt;alignstart&gt;安田島には安田さん、佐藤さん、森さんがいます。佐藤さんと森さんは奇癖を持っています。佐藤さんは自らを「Kevin」と呼んでくれと言い、森さんは自らを「morris」と呼んでくれと言います。二人とも気持ち悪いです。&lt;/alignstart&gt;
+          <br>
+          &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+          <br>
+          &lt;alignend&gt;安田島には安田さん、佐藤さん、森さんがいます。佐藤さんと森さんは奇癖を持っています。佐藤さんは自らを「Kevin」と呼んでくれと言い、森さんは自らを「morris」と呼んでくれと言います。二人とも気持ち悪いです。&lt;/alignend&gt;
+          <br>
+          &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+          <br>
+          &lt;aligncenter&gt;安田島には安田さん、佐藤さん、森さんがいます。佐藤さんと森さんは奇癖を持っています。佐藤さんは自らを「Kevin」と呼んでくれと言い、森さんは自らを「morris」と呼んでくれと言います。二人とも気持ち悪いです。&lt;/aligncenter&gt;
+        </p>
       </div>
+
+      <div class="illustration l-midashi border-top-dashed">
+        <p>illustration</p>
+        <div class="image">
+          <img src="../../image/align1.jpg" alt="align-en" />
+          <img src="../../image/align2.jpg" alt="align-jp" />
+        </div>
+      </div>
+
     </div>
 
   </div>
+  <!-- js読み込み-->
+  <script>
+    window.onload = function () {
+      $('.aside.nav-title').load('aside.html');
+    }
+  </script>
+  <script src="../../javascript/index.js"></script>
 </body>
 
 </html>
