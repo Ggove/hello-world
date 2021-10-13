@@ -9,27 +9,58 @@
   <link rel="stylesheet" href="../../css/tag_style.css">
   <link rel="stylesheet" href="../../css/list.css">
   <link rel="stylesheet" href="../../css/table.css">
+  <link rel="stylesheet" href="../../css/navigation.css">
   <link rel="icon" href="../../image/favicon.ico" type="image/vnd.microsoft.icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
+
+  <header>
+    <div class="header-logo">
+      <p><a href="../../html/simple/index.html">
+          <img src="../../image/Yznet_Specification.png" alt="Yznet_Specification" />
+        </a></p>
+    </div>
+    <div class="header-nav toggle_btn">
+      <img src="../../image/barcode.png" alt="barcode" />
+    </div>
+  </header>
+
   <div class="body">
 
-    <div class="title">
-      <p>●a</p>
+    <div class="aside nav-title">
+      <!-- jQuery -->
     </div>
 
-    <div class="definition">
+    <div class="mask"></div>
+
+    <div class="title">
+      <p>a</p>
+    </div>
+
+    <div class="explanation l-midashi">
+      <p>説明</p>
+      <p>
+        aタグはhrefの指定urlに飛ぶリンクを作成します。
+      </p>
+    </div>
+
+    <div class="definition-nav nav">
+      <p>property</p>
+    </div>
+
+    <div class="definition group">
 
       <div class="tag-name s-midashi list">
-        <p>tag name</p>
+        <p>タグ名称</p>
         <ul>
           <li>a</li>
         </ul>
       </div>
 
       <div class="tag-attribute-label s-midashi list">
-        <p>attribute</p>
+        <p>属性</p>
         <ul>
           <li>href</li>
           <li>class</li>
@@ -37,7 +68,7 @@
       </div>
 
       <div class="tag-attribute-value s-midashi table">
-        <p>attribute-value</p>
+        <p>属性値</p>
         <table>
           <tr>
             <th>href</th>
@@ -49,37 +80,30 @@
           </tr>
         </table>
       </div>
-
     </div>
 
-    <div class="explanation l-midashi">
-      <p>explanation</p>
-      <p>
-        aタグはリンク先へジャンプするために使用します。
-      </p>
-    </div>
+    <div class="example-nav nav">example</div>
+    <div class="example-body group">
+      <div class="code l-midashi border-top-dashed">
+        <p>Code</p>
+        <p>
+          &lt;p id="link-from"&gt;リンク元です。&lt;/p&gt;
+          <br>
+          &lt;p&gt;　リンクを貼ります。&lt;a href="#link-to"&gt;リンク先へ&lt;/a&gt;　リンクを貼りました。&lt;/p&gt;
+          <br>
+          <br>
+          &lt;p id="link-to"&gt;リンク先です。&lt;/p&gt;
+          <br>
+          &lt;p&gt;　リンクを貼ります。&lt;a href="#link-from"&gt;リンク元へ&lt;/a&gt;　リンクを貼りました。&lt;/p&gt;
+        </p>
+      </div>
+      <div class="illustration l-midashi border-top-dashed">
+        <p>illustration</p>
+        <div class="image">
+          <img src="../../image/a_from.jpg" alt="a_from" />
+          <img src="../../image/a_to.jpg" alt="a_to" />
+        </div>
 
-
-
-    <div class="example l-midashi">
-      <p>example</p>
-      <p>
-        &lt;p id="link-from"&gt;リンク元です。&lt;/p&gt;
-        <br>
-        &lt;p&gt;　リンクを貼ります。&lt;a href="#link-to"&gt;リンク先へ&lt;/a&gt;　リンクを貼りました。&lt;/p&gt;
-        <br>
-        <br>
-        &lt;p id="link-to"&gt;リンク先です。&lt;/p&gt;
-        <br>
-        &lt;p&gt;　リンクを貼ります。&lt;a href="#link-from"&gt;リンク元へ&lt;/a&gt;　リンクを貼りました。&lt;/p&gt;
-      </p>
-    </div>
-
-    <div class="illustration l-midashi">
-      <p>illustration</p>
-      <div class="image">
-        <img src="../../image/a_from.jpg" alt="a_from" />
-        <img src="../../image/a_to.jpg" alt="a_to" />
       </div>
     </div>
 
@@ -89,14 +113,15 @@
       </p>
       <br>
       <p>
-        また、aタグのhref属性も同じ様に、属性値に「id-」を先頭に付与しますが、こちらは「id-」を先頭にした属性値を指定していてもその処理は省略されません。
+        また、aタグのhref属性も同じ様に、属性値に「id-」を先頭に付与しますが、こちらは「id-」を先頭にした属性値を指定していてもその処理は省略されません。id属性の属性値には「id-」から始まる値を設定しないようにしてください。
       </p>
       <br>
       <p>
         以下に、failとなる例を示します。
       </p>
       <p>
-        コンバート前
+        <br>
+        ・コンバート前
         <br>
         &lt;p id="id-link-from"&gt;リンク元です。&lt;/p&gt;
         <br>
@@ -104,7 +129,8 @@
         <br>
         &lt;p id="id-link-to"&gt;リンク先です。&lt;/p&gt;
         <br>
-        コンバート後
+        <br>
+        ・コンバート後
         <br>
         &lt;p id="id-link-from"&gt;リンク元です。&lt;/p&gt;
         <br>
@@ -115,6 +141,13 @@
     </div>
 
   </div>
+  <!-- js読み込み-->
+  <script>
+    window.onload = function () {
+      $('.aside.nav-title').load('aside.html');
+    }
+  </script>
+  <script src="../../javascript/index.js"></script>
 </body>
 
 </html>

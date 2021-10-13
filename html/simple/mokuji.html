@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mokujiタグの説明</title>
+  <link rel="stylesheet" href="../../css/tag_style.css">
+  <link rel="stylesheet" href="../../css/list.css">
+  <link rel="stylesheet" href="../../css/table.css">
+  <link rel="icon" href="../../image/favicon.ico" type="image/vnd.microsoft.icon">
+</head>
+
+<body>
+  <div class="body">
+
+    <div class="title">
+      <p>mokuji</p>
+    </div>
+
+    <div class="explanation l-midashi">
+      <p>説明</p>
+      <p>
+        mokujiタグは、論理目次を生成します。その際、タグで囲んだテキストを本文と論理目次に記述します。
+      </p>
+    </div>
+    <div class="definition-nav">
+      <p>property</p>
+    </div>
+    <div class="definition">
+
+      <div class="tag-name s-midashi plain">
+        <p>タグ名称</p>
+        <p>mokuji</p>
+      </div>
+
+      <div class="tag-attribute-label s-midashi list">
+        <p>属性</p>
+        <ul>
+          <li>href</li>
+          <li>depth</li>
+        </ul>
+      </div>
+
+      <div class="tag-attribute-value s-midashi list">
+        <p>属性値</p>
+        <ul>
+          <li>{英 | 数}</li>
+        </ul>
+      </div>
+
+      <div class="translation s-midashi plain">
+        <p>クラス変形</p>
+        <p>なし</p>
+      </div>
+
+      <div class="stylesheet-property s-midashi plain">
+        <p>スタイルシートプロパティ</p>
+        <p>なし</p>
+      </div>
+
+    </div>
+
+    <div class="example l-midashi">
+      <p>example</p>
+      &lt;p&gt;&lt;a href="#page001"&gt;
+      <br>
+      &lt;mokuji href="#page001" depth="001"&gt;第一章&lt;/mokuji&gt;
+      <br>
+      &lt;/a&gt;&lt;/p&gt;
+      <br>
+      &lt;p&gt;&lt;a href="#2"&gt;
+      <br>
+      &lt;mokuji href="#2" depth="002"&gt;第二章&lt;/mokuji&gt;
+      <br>
+      &lt;/a&gt;&lt;/p&gt;
+      <br>
+      &lt;p&gt;&lt;a href="#003"&gt;
+      <br>
+      &lt;mokuji href="#003" depth="003"&gt;第三章&lt;/mokuji&gt;
+      <br>
+      &lt;/a&gt;&lt;/p&gt;
+      <br>
+      <br>
+      &lt;p id="page001"&gt;目次1からです。&lt;/p&gt;
+      <br>
+      &lt;p id="2"&gt;目次2からです。&lt;/p&gt;
+      <br>
+      &lt;p id="003"&gt;目次3からです。&lt;/p&gt;
+    </div>
+
+    <div class="illustration l-midashi ref">
+      <p>illustration</p>
+      <div class="image">
+        <img src="../../image/mokuji.jpg" alt="mokuji" />
+        <p>図１ : 論理目次と階層</p>
+      </div>
+    </div>
+
+    <div class="point l-midashi">
+      <p>Point</p>
+      <p>mokujiタグの変換は、epubを作成する時にnavigation-documentsにリスト形式で追記します。</p>
+    </div>
+
+    <div class="caution l-midashi">
+      <p>Caution</p>
+      <p>hrefとidの挙動が違うことに注意してください。hrefは「id-」を先頭に追記しますが、idは「id-」が先頭であれば追記しません。hrefとidの値を合わせるようにしてください。
+        <br>
+        論理目次の階層は2階層までとなります。depthに3以上の数値を入れた場合はdepth="002"に変換されます。また、最初の目次に対して、depthに2階層目の指定をすることはパースエラーとなります。
+      </p>
+    </div>
+
+  </div>
+</body>
+
+</html>

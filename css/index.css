@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
 
 .content-all{
-  margin: 1rem;
-  padding: 1rem;
-  border: 2px solid #ddd;
+  margin: 0;
+  padding: 0;
 }
 
 header{
@@ -18,13 +17,15 @@ header{
 .header-content{
   display: flex;
   align-items: center;
-  margin: 5px;
-  margin-top: 10px;
+  margin: 0;
+  padding: 0;
   background-color: skyblue;
+  height: 30px;
 }
 
 .header-content > *{
   margin-right: 3%;
+  height: inherit;
 }
 
 .header-content .logo{
@@ -33,18 +34,19 @@ header{
   width: 20%;
 }
 
-.header-content .title{
-  width: 50%;
+.header-content .logo img{
+  height: 30px;
 }
 
-.header-content p{
-  background-color: rosybrown;
-  vertical-align: middle;
+.header-content .title{
+  height: inherit;
+  width: 50%;
+  background-color: lawngreen;
   text-align: center;
-  overflow-x: hidden;
-  font-size: 3rem;
-  font-family: 'Kosugi Maru', sans-serif;
-  font-weight: bold;
+}
+
+.header-content .title img{
+  height: inherit;
 }
 
 .header-content nav{
@@ -52,9 +54,33 @@ header{
   background-color: salmon;
 }
 
+.toggle_btn{
+  display: block;
+  position: relative;
+  width: 40px;
+  height: inherit;
+  cursor: pointer;
+  background-color: springgreen;
+  margin-left: auto;
+}
+
+.toggle_btn span{
+  display: block;
+  width: inherit;
+  border-bottom: 2px solid #666;
+  padding: 3px 0;
+  margin: 0;
+}
+
+/* body */
+
 .body{
   display: block;
-  margin-top: 140px;
+  margin: 0;
+  padding: 0;
+  margin-top: 40px;
+  border: 1px solid #eee;
+  font-family: 'Kosugi Maru', sans-serif;
 }
 
 main{
@@ -66,29 +92,13 @@ main{
   background-color: #666;
 }
 
-main > .title{
-  font-size: 1.5rem;
+main .title{
   text-align: center;
 }
 
-.toggle_btn{
-  display: block;
-  position: relative;
-  width: 40px;
-  height: 30px;
-  cursor: pointer;
-  background-color: springgreen;
-  padding: 2px;
-  margin-left: auto;
-}
-
-.toggle_btn span{
-  display: block;
-  width: 30px;
-  height: 2px;
-  background-color: #666;
-  margin: 5px;
-  margin-bottom: 7px;
+main .title p{
+  font-weight: bold;
+  font-size: 2rem;
 }
 
 aside{
@@ -102,37 +112,33 @@ aside{
 .open aside{
   display: block;
   position: fixed;
+  overflow: auto;
+  height: 100%;
   width: 20%;
   padding: 20px;
   z-index: 999;
 }
 
 .nav-title{
-  margin: 1rem 0;
-  border-bottom: 1px solid #333;
+  margin-bottom: 3rem;
 }
 
-.nav-title p{
-  margin: 0;
-  padding: 0;
-  font-weight: bold;
-  font-size: 150%;
-  font-family: 'Kosugi Maru', sans-serif;
+.nav-title > li{
   text-align: center;
+  font-weight: bold;
+  padding-bottom: 5px;
+  font-size: 1.5rem;
 }
 
-.tag-type{
-  margin: 1rem 0;
-  border-bottom: 1px solid #333;
-}
-
-.tag-type > p{
-  margin: 0;
-  padding: 0;
+.tag-type > li{
+  padding-bottom: 3px;
   font-weight: bold;
   font-size: 130%;
-  font-family: 'Kosugi Maru', sans-serif;
   text-align: center;
+}
+
+.tag-item > li{
+  padding-left: 10px;
 }
 
 ul{
@@ -150,7 +156,6 @@ li{
 li a{
   text-decoration: none;
   color: #666;
-  font-size: 130%;
   letter-spacing: 0.2rem;
   font-family: serif;
 }
@@ -176,7 +181,7 @@ li a{
   width: 100%;
   margin-top: 10px;
   overflow-x: hidden;
-  background-color: turquoise;
+  background-color: rgba(25, 255, 5, 0.151);
 }
 
 table{

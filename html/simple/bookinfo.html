@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bookinfoタグの説明</title>
+  <link rel="stylesheet" href="../../css/tag_style.css">
+  <link rel="stylesheet" href="../../css/list.css">
+  <link rel="stylesheet" href="../../css/table.css">
+  <link rel="icon" href="../../image/favicon.ico" type="image/vnd.microsoft.icon">
+</head>
+
+<body>
+
+  <header>
+    <p><a href="../../html/simple/index.html">
+        <img src="../../image/Yznet_Specification.png" alt="Yznet_Specification" />
+      </a></p>
+  </header>
+
+  <div class="body">
+
+    <div class="title">
+      <p>bookinfo</p>
+    </div>
+
+    <div class="explanation l-midashi">
+      <p>説明</p>
+      <p>
+        bookinfoタグは、論理目次を生成します。その際、タグで囲んだテキストを本文と論理目次に記述します。
+      </p>
+    </div>
+
+    <div class="definition-nav nav">
+      <p>property</p>
+    </div>
+    <div class="definition group">
+
+      <div class="tag-name s-midashi plain">
+        <p>タグ名称</p>
+        <p>bookinfo</p>
+      </div>
+
+      <div class="tag-attribute-label s-midashi plain">
+        <p>属性</p>
+        <p>なし</p>
+      </div>
+
+      <div class="tag-attribute-value s-midashi plain">
+        <p>属性値</p>
+        <p>なし</p>
+      </div>
+
+      <div class="translation s-midashi plain">
+        <p>xml変形</p>
+        <p>metadata</p>
+      </div>
+
+      <div class="stylesheet-property s-midashi plain">
+        <p>スタイルシートプロパティ</p>
+        <p>なし</p>
+      </div>
+
+      <div class="child-notes l-midashi flexlist">
+        <p>配下タグ</p>
+        <ul>
+          <li>seriesname</li>
+          <li>serieskana</li>
+          <li>maintitlename</li>
+          <li>maintitlekana</li>
+          <li>subtitlename</li>
+          <li>subtitlekana</li>
+          <li>creatorname</li>
+          <li>creatorkana</li>
+          <li>creatorrole</li>
+          <li>publishername</li>
+          <li>publisherkana</li>
+          <li>epubspec</li>
+          <li>language</li>
+          <li>uuid</li>
+          <li>update</li>
+          <li>ebpajver</li>
+          <li>ibooksver</li>
+          <li>ibooksscroll</li>
+          <li>bookshelf</li>
+          <li>linesize</li>
+          <li>pgdirection</li>
+          <li>linkline</li>
+          <li>addncx</li>
+          <li>vhtoc</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="example-nav nav">example</div>
+    <div class="example-body group">
+      <div class="code l-midashi border-top-dashed">
+        <p>Code</p>
+        <p>
+          &lt;bookinfo&gt;
+          <br>
+          &lt;seriesname&gt;&lt;/seriesname&gt;
+          <br>
+          &lt;serieskana&gt;&lt;/serieskana&gt;
+          <br>
+          &lt;maintitlename&gt;佐藤さんの休日は最低だ&lt;/maintitlename&gt;
+          <br>
+          &lt;maintitlekana&gt;サトウサンノキュウジツハサイテイダ&lt;/maintitlekana&gt;
+          <br>
+          &lt;subtitlename&gt;なし&lt;/subtitlename&gt;
+          <br>
+          &lt;subtitlekana&gt;なし&lt;/subtitlekana&gt;
+          <br>
+          &lt;creatorname num="001"&gt;Y.J.&lt;/creatorname&gt;
+          &lt;
+          <br>
+          creatorkana num="001"&gt;ワイジェー&lt;/creatorkana&gt;
+          <br>
+          &lt;creatorrole num="001"&gt;aut&lt;/creatorrole&gt;
+          <br>
+          &lt;publishername&gt;(有)Yznet&lt;/publishername&gt;
+          <br>
+          &lt;publisherkana&gt;ユウゲンガイシャワイズネット&lt;/
+          publisherkana&gt;
+          <br>
+          &lt;epubspec&gt;editor&lt;/epubspec&gt;
+          <br>
+          &lt;language&gt;ja&lt;/language&gt;
+          <br>
+          &lt;uuid&gt;自動&lt;/uuid&gt;
+          <br>
+          &lt;isbn&gt;なし&lt;/isbn&gt;
+          <br>
+          &lt;update&gt;自動&lt;/update&gt;
+          <br>
+          &lt;ebpajver&gt;1.1.3&lt;/ebpajver&gt;
+          <br>
+          &lt;ibooksver&gt;1.0&lt;/ibooksver&gt;
+          <br>
+          &lt;ibooksscroll&gt;自動&lt;/ibooksscroll&gt;
+          <br>
+          &lt;bookshelf&gt;image/cover.jpg&lt;/bookshelf&gt;
+          <br>
+          &lt;linesize&gt;1.6&lt;/linesize&gt;
+          <br>
+          &lt;pgdirection&gt;rtl&lt;/pgdirection&gt;
+          <br>
+          &lt;linkline&gt;あり&lt;/linkline&gt;
+          <br>
+          &lt;addncx&gt;なし&lt;/addncx&gt;
+          <br>
+          &lt;vhtoc&gt;自動&lt;/vhtoc&gt;
+          <br>
+          &lt;/bookinfo&gt;
+        </p>
+      </div>
+
+    </div>
+
+    <div class="point l-midashi">
+      <p>Point</p>
+      <p>ほとんどのオプションが決まっているため、コピペで対応可。<br>ただし、maintitlename, maintitlekana, creatorname, creatorkana, publishername,
+        publisherkanaは毎回変わるので入力すること。
+      </p>
+    </div>
+
+  </div>
+</body>
+
+</html>
