@@ -9,26 +9,57 @@
   <link rel="stylesheet" href="../../css/tag_style.css">
   <link rel="stylesheet" href="../../css/list.css">
   <link rel="stylesheet" href="../../css/table.css">
+  <link rel="stylesheet" href="../../css/navigation.css">
   <link rel="icon" href="../../image/favicon.ico" type="image/vnd.microsoft.icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 </head>
 
 <body>
+
+  <header>
+    <div class="header-logo">
+      <p><a href="../../html/simple/index.html">
+          <img src="../../image/Yznet_Specification.png" alt="Yznet_Specification" />
+        </a></p>
+    </div>
+    <div class="header-nav toggle_btn">
+      <img src="../../image/barcode.png" alt="barcode" />
+    </div>
+  </header>
+
   <div class="body">
 
-    <div class="title">
-      <p>●font</p>
+    <div class="aside nav-title">
+      <!-- jQuery -->
     </div>
 
-    <div class="definition">
+    <div class="mask"></div>
 
-      <div class="tag-name midashi-inline plain">
-        <p>tag name</p>
-        <p>font</p>
+    <div class="title">
+      <p>font</p>
+    </div>
+
+    <div class="explanation sentence midashi-block">
+      <p>説明</p>
+      <p>
+        fontタグは明朝体、ゴシック体を指定したい句や文に使用します。
+      </p>
+    </div>
+
+    <div class="definition-nav nav">property</div>
+    <div class="definition group">
+
+      <div class="tag-name list chapter">
+        <ul>
+          <li>タグ名称</li>
+          <li>font</li>
+        </ul>
       </div>
 
-      <div class="tag-attribute-label midashi-inline list">
-        <p>attribute</p>
+      <div class="tag-attribute-label list chapter ">
         <ul>
+          <li>属性</li>
           <li>face</li>
           <li>size</li>
           <li>color</li>
@@ -36,7 +67,7 @@
         </ul>
       </div>
 
-      <div class="tag-attribute-value midashi-inline table-yoko">
+      <div class="tag-attribute-value midashi-block table-yoko chapter">
         <p>attribute-value</p>
         <table>
           <tbody>
@@ -48,7 +79,7 @@
             </tr>
             <tr>
               <td>gfont</td>
-              <td>000%</td>
+              <td>XXX%</td>
               <td>000000</td>
               <td>yes</td>
             </tr>
@@ -62,32 +93,83 @@
         </table>
       </div>
 
-    </div>
+      <div class="translate-to-class midashi-block table chapter">
+        <p>クラス変化</p>
+        <table>
+          <tbody>
+            <tr>
+              <th>face</th>
+              <th>size</th>
+              <th>color</th>
+              <th>bold</th>
+            </tr>
+            <tr>
+              <td>mfont</td>
+              <td>font-XXXper</td>
+              <td>color-000000</td>
+              <td>bold(yes)</td>
+            </tr>
+            <tr>
+              <td>gfont</td>
+              <td></td>
+              <td></td>
+              <td>なし(no)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-    <div class="explanation midashi-block">
-      <p>explanation</p>
-      <p>
-        fontタグは明朝体、ゴシック体を指定したい句や文に使用します。
-      </p>
-    </div>
+      <!-- css property -->
+      <div class="css-property midashi-block table chapter">
+        <p>CSSプロパティ</p>
+        <table>
+          <tbody>
+            <tr>
+              <th>mfont</th>
+              <th>gfont</th>
+              <th>font-XXXper</th>
+              <th>color-000000</th>
+              <th>bold</th>
+            </tr>
+            <tr>
+              <td>font-family: serif系</td>
+              <td>font-family: sans-serif系</td>
+              <td>font-size: XXX%</td>
+              <td>color: 000000</td>
+              <td>font-weight: bold</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-    <div class="example midashi-block">
-      <p>example</p>
-      <p>
-        &lt;p&gt;&lt;font face="mfont" size="130%" bold="yes" color="ff0000"&gt;私が明朝体です。&lt;/font&gt;&lt;/p&gt;
-        <br>
-        &lt;p&gt;&lt;font face="gfont" size="130%" bold="no" color="ff0000"&gt;私がゴシック体です。&lt;/font&gt;&lt;/p&gt;
-      </p>
     </div>
+    <div class="example-nav nav">example</div>
+    <div class="example-body group">
 
-    <div class="illustration midashi-block">
-      <p>illustration</p>
-      <div class="image">
-        <img src="../../image/font.jpg" alt="font" />
+      <div class="code sentence border-top-dashed midashi-block chapter">
+        <p>Code</p>
+        <p>
+          &lt;p&gt;&lt;font face="mfont" size="130%" bold="yes" color="ff0000"&gt;私が明朝体です。&lt;/font&gt;&lt;/p&gt;
+          <br>
+          &lt;p&gt;&lt;font face="gfont" size="130%" bold="no" color="ff0000"&gt;私がゴシック体です。&lt;/font&gt;&lt;/p&gt;
+        </p>
+      </div>
+
+      <div class="illustration midashi-block border-top-dashed chapter">
+        <p>illustration</p>
+        <div class="image">
+          <img src="../../image/font.jpg" alt="font" />
+        </div>
       </div>
     </div>
 
   </div>
+  <script>
+    window.onload = function () {
+      $('.aside.nav-title').load('aside.html');
+    }
+  </script>
+  <script src="../../javascript/index.js"></script>
 </body>
 
 </html>

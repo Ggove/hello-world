@@ -9,31 +9,65 @@
   <link rel="stylesheet" href="../../css/tag_style.css">
   <link rel="stylesheet" href="../../css/list.css">
   <link rel="stylesheet" href="../../css/table.css">
+  <link rel="stylesheet" href="../../css/navigation.css">
   <link rel="icon" href="../../image/favicon.ico" type="image/vnd.microsoft.icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
+
+  <header>
+    <div class="header-logo">
+      <p><a href="../../html/simple/index.html">
+          <img src="../../image/Yznet_Specification.png" alt="Yznet_Specification" />
+        </a></p>
+    </div>
+    <div class="header-nav toggle_btn">
+      <img src="../../image/barcode.png" alt="barcode" />
+    </div>
+  </header>
+
   <div class="body">
 
-    <div class="title">
-      <p>●h</p>
+    <div class="aside nav-title">
+      <!-- jQuery -->
     </div>
 
-    <div class="definition">
+    <div class="mask"></div>
 
-      <div class="tag-name midashi-inline plain">
-        <p>tag name</p>
-        <p>h</p>
+    <div class="title">
+      <p>h</p>
+    </div>
+
+    <!-- 説明 -->
+    <div class="explanation sentence midashi-block">
+      <p>説明</p>
+      <p>
+        hタグは見出しに使用します。
+      </p>
+    </div>
+
+    <!-- 定義 -->
+    <div class="definition-nav nav">property</div>
+    <div class="definition group">
+
+      <div class="tag-name list chapter">
+        <ul>
+          <li>タグ名称</li>
+          <li>h</li>
+        </ul>
       </div>
 
-      <div class="tag-attribute-label midashi-inline plain">
-        <p>attribute</p>
-        <p>なし</p>
+      <div class="tag-attribute-label list chapter">
+        <ul>
+          <li>attribute</li>
+          <li>なし</li>
+        </ul>
       </div>
 
       <div class="tag-attribute-value midashi-inline list">
-        <p>level</p>
         <ul>
+          <li>level</li>
           <li>1</li>
           <li>2</li>
           <li>3</li>
@@ -44,40 +78,44 @@
 
     </div>
 
-    <div class="explanation midashi-block">
-      <p>explanation</p>
-      <p>
-        hタグは見出しに使用します。
-      </p>
-    </div>
+    <div class="example-nav nav">example</div>
+    <div class="example-body group">
 
-    <div class="example midashi-block">
-      <p>example</p>
-      <p>
-        &lt;start val="1em"&gt;&lt;h1 class="gfont font-1em30"&gt;第一章&lt;/h1&gt;&lt;/start&gt;
-        <br>
-        &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-        <br>
-        &lt;p&gt;隣の方が見出しです。&lt;/p&gt;
-      </p>
-    </div>
-
-    <div class="illustration midashi-block">
-      <p>illustration</p>
-      <div class="image">
-        <img src="../../image/h.jpg" alt="h" />
+      <div class="code sentence border-top-dashed midashi-block chapter">
+        <p>Code</p>
+        <p>
+          &lt;start val="1em"&gt;&lt;h1 class="gfont font-1em30"&gt;第一章&lt;/h1&gt;&lt;/start&gt;
+          <br>
+          &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+          <br>
+          &lt;p&gt;隣の方が見出しです。&lt;/p&gt;
+        </p>
       </div>
+
+      <div class="illustration midashi-block border-top-dashed chapter">
+        <p>illustration</p>
+        <div class="image">
+          <img src="../../image/h.jpg" alt="h" />
+        </div>
+      </div>
+
     </div>
 
     <div class="caution midashi-block">
       <p>Caution</p>
-      <p>現コンバータの環境では、hタグの効果がリセットされてしまいます。平文と同じになっていますので、大きさ、太さを変える際はクラス指定をご使用ください。
-      </p>
-      <p>
-        また、現コンバータでは、h6は無効となっておりますのでご注意ください。
+      <p>現コンバータの環境ではhタグの効果がリセットされてしまいます。平文と同じになっていますので、大きさ、太さを変える際はクラス指定をご使用ください。
+        <br>
+        また、h6だけ変換できなくなっており、コンバート後はタグなしになりますのでご注意ください。
       </p>
     </div>
 
+    <!-- js読み込み-->
+    <script>
+      window.onload = function () {
+        $('.aside.nav-title').load('aside.html');
+      }
+    </script>
+    <script src="../../javascript/index.js"></script>
   </div>
 </body>
 

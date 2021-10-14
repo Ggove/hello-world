@@ -9,61 +9,131 @@
   <link rel="stylesheet" href="../../css/tag_style.css">
   <link rel="stylesheet" href="../../css/list.css">
   <link rel="stylesheet" href="../../css/table.css">
+  <link rel="stylesheet" href="../../css/navigation.css">
   <link rel="icon" href="../../image/favicon.ico" type="image/vnd.microsoft.icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 </head>
 
 <body>
+
+  <header>
+    <div class="header-logo">
+      <p><a href="../../html/simple/index.html">
+          <img src="../../image/Yznet_Specification.png" alt="Yznet_Specification" />
+        </a></p>
+    </div>
+    <div class="header-nav toggle_btn">
+      <img src="../../image/barcode.png" alt="barcode" />
+    </div>
+  </header>
+
   <div class="body">
 
-    <div class="title">
-      <p>●end</p>
+    <div class="aside nav-title">
+      <!-- jQuery -->
     </div>
 
-    <div class="definition">
+    <div class="mask"></div>
 
-      <div class="tag-name midashi-inline plain">
-        <p>tag name</p>
-        <p>end</p>
-      </div>
+    <!-- タイトル -->
+    <div class="title">
+      <p>end</p>
+    </div>
 
-      <div class="tag-attribute-label midashi-inline plain">
-        <p>attribute</p>
-        <p>val</p>
-      </div>
+    <!-- 説明 -->
+    <div class="explanation sentence midashi-block">
+      <p>説明</p>
+      <p>
+        endタグは折り返しの字上げをします。
+      </p>
+    </div>
 
-      <div class="tag-attribute-value midashi-inline list">
-        <p>attribute-value</p>
+    <!-- 定義 -->
+    <div class="definition-nav nav">property</div>
+    <div class="definition group">
+
+      <div class="tag-name list chapter">
         <ul>
-          <li>0em</li>
-          <li>0em00</li>
+          <li>タグ名称</li>
+          <li>end</li>
+        </ul>
+      </div>
+
+      <div class="tag-attribute-label list chapter ">
+        <ul>
+          <li>属性</li>
+          <li>val</li>
+        </ul>
+      </div>
+
+      <div class="tag-attribute-value list chapter">
+        <ul>
+          <li>属性値</li>
+          <li>Xem</li>
+        </ul>
+      </div>
+
+      <div class="translate-to-class list chapter">
+        <ul>
+          <li>クラス変化</li>
+          <li>&lt;div class="end-Xem"&gt;</li>
+        </ul>
+      </div>
+
+      <div class="css-property list chapter">
+        <ul>
+          <li>CSSプロパティ</li>
+          <li>margin-bottom(vrtl)</li>
+          <li>margin-right(hltr)</li>
         </ul>
       </div>
 
     </div>
 
-    <div class="explanation midashi-block">
-      <p>explanation</p>
-      <p>
-        endタグは、字上げ(文章の底上げ)に使用します。
-      </p>
-    </div>
-
-    <div class="example midashi-block">
-      <p>example</p>
-      <p>
-        &lt;end val="2em"&gt;&lt;indent
-        val="1em"&gt;これは長い文章です。これは長い長い文章です。これは長い長い長い文章です。長くて退屈な文章です。内容だけは空っぽです。&lt;/indent&gt;&lt;/end&gt;
-      </p>
-    </div>
-
-    <div class="illustration midashi-block">
-      <p>illustration</p>
-      <div class="image">
-        <img src="../../image/end.jpg" alt="end" />
+    <!-- 例 -->
+    <div class="example-nav nav">example</div>
+    <div class="example-body group">
+      <div class="example sentence border-top-dashed midashi-block chapter">
+        <p>Code</p>
+        <p>
+          &lt;end val="2em"&gt;&lt;indent
+          val="1em"&gt;これは長い文章です。これは長い長い文章です。これは長い長い長い文章です。長くて退屈な文章です。内容だけは空っぽです。&lt;/indent&gt;&lt;/end&gt;
+          <br><br>
+          &lt;p&gt;これは長い文章です。これは長い長い文章です。これは長い長い長い文章です。長くて退屈な文章です。内容だけは空っぽです。&lt;/p&gt;
+        </p>
       </div>
+
+      <div class="illustration midashi-block border-top-dashed chapter">
+        <p>illustration</p>
+        <div class="image">
+          <img src="../../image/end.jpg" alt="end" />
+        </div>
+      </div>
+
+    </div>
+
+    <!-- caution -->
+    <div class="caution sentence midashi-block">
+      <p>Caution</p>
+      <p>少数以下の数値を指定することはできません。
+        <br>
+        また、指定できる数は、1~9までの正の数になります。
+        <br>
+        ○ &lt;end val="1em"&gt;本文&lt;/end&gt;
+        <br>
+        × &lt;end val="1em25"&gt;本文&lt;/end&gt;
+      </p>
     </div>
 
   </div>
+  <!-- js読み込み-->
+  <script>
+    window.onload = function () {
+      $('.aside.nav-title').load('aside.html');
+    }
+  </script>
+  <script src="../../javascript/index.js"></script>
 </body>
 
 </html>

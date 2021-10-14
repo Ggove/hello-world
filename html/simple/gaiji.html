@@ -5,34 +5,71 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>gaijiタグの説明</title>
   <link rel="stylesheet" href="../../css/tag_style.css">
   <link rel="stylesheet" href="../../css/list.css">
   <link rel="stylesheet" href="../../css/table.css">
+  <link rel="stylesheet" href="../../css/navigation.css">
   <link rel="icon" href="../../image/favicon.ico" type="image/vnd.microsoft.icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 </head>
 
 <body>
+
+  <header>
+    <div class="header-logo">
+      <p><a href="../../html/simple/index.html">
+          <img src="../../image/Yznet_Specification.png" alt="Yznet_Specification" />
+        </a></p>
+    </div>
+    <div class="header-nav toggle_btn">
+      <img src="../../image/barcode.png" alt="barcode" />
+    </div>
+  </header>
+
   <div class="body">
 
-    <div class="title"><span>●gaiji</span></div>
+    <div class="aside nav-title">
+      <!-- jQuery -->
+    </div>
 
-    <div class="definition">
+    <div class="mask"></div>
 
-      <div class="tag-name">
-        <p>gaiji</p>
-      </div>
+    <!-- タイトル -->
+    <div class="title">
+      <p>gaiji</p>
+    </div>
 
-      <div class="tag-attribute-label">
-        <p>label</p>
+    <!-- 説明 -->
+    <div class="explanation sentence midashi-block">
+      <p>説明</p>
+      <p>
+        gaijiタグは、文章中に変換できない文字や文字列がある場合に、代替の手段として画像を使用するために使います。
+      </p>
+    </div>
+
+    <!-- 定義 -->
+    <div class="definition-nav nav">property</div>
+    <div class="definition group">
+
+      <div class="tag-name list chapter">
         <ul>
-          <li>list1</li>
-          <li>list2</li>
-          <li>list3</li>
+          <li>タグ名称</li>
+          <li>gaiji</li>
         </ul>
       </div>
 
-      <div class="tag-attribute-value">
+      <div class="tag-attribute-label list chapter">
+        <ul>
+          <li>属性</li>
+          <li>src</li>
+          <li>alt</li>
+          <li>class</li>
+        </ul>
+      </div>
+
+      <div class="tag-attribute-value table midashi-block chapter">
         <p>attribute-value</p>
         <table>
           <tr>
@@ -51,28 +88,77 @@
         </table>
       </div>
 
+      <div class="translate-to-tag midashi-block list chapter">
+        <ul>
+          <li>タグ変形</li>
+          <li>gaiji → img</li>
+        </ul>
+      </div>
+
+      <div class="translate-to-class midashi-block list chapter">
+        <p>クラス変形</p>
+        <p>なし</p>
+      </div>
+
+      <div class="css-property midashi-block table-yoko chapter">
+        <p>CSSプロパティ</p>
+        <table>
+          <tbody>
+            <tr>
+              <th>gaiji</th>
+              <th>gaiji-line</th>
+              <th>gaiji-wide</th>
+            </tr>
+            <tr>
+              <td>width="1em"</td>
+              <td>width="1em"</td>
+              <td>width=auto</td>
+            </tr>
+            <tr>
+              <td>width="1em"</td>
+              <td>height=auto</td>
+              <td>height="1em"</td>
+            </tr>
+            <tr>
+              <td>その他</td>
+              <td>その他</td>
+              <td>その他</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
     </div>
 
-    <div class="description">
-      <p class="explanation">
-        gaijiタグは、文章中に変換できない文字や文字列がある場合に、代替の手段として画像を使用するために使います。
-      </p>
-      <div class="example">
+    <div class="example-nav nav">example</div>
+    <div class="example-body group">
+
+      <div class="code sentence border-top-dashed midashi-block chapter">
+        <p>Code</p>
         <p>
-          &lt;p&gt;　王&lt;gaiji src="image/u83BE.png" alt="莾"/&gt;&lt;!--莾--&gt;は紀元８年に国号を「新」と改めた。王&lt;gaiji class="gaiji"
+          &lt;p&gt;　王&lt;gaiji src="image/u83BE.png" alt="莾"/&gt;&lt;!--莾--&gt;は紀元８年に国号を「新」と改めた。王&lt;gaiji
+          class="gaiji"
           src="image/u83BE.png" alt="莾"/&gt;&lt;!--莾--&gt;は武帝が官学とした儒教を狂信しており、儒教に則った政治を徹底しようとした。&lt;/p&gt;
         </p>
       </div>
-      <div class="illustration">
-        <p>illustration :</p>
+      <div class="illustration midashi-block border-top-dashed chapter">
+        <p>illustration</p>
         <div class="image">
           <img src="../../image/gaiji_hltr.jpg" alt="gaiji_hltr" />
           <img src="../../image/gaiji_vrtl.jpg" alt="gaiji_vrtl">
         </div>
       </div>
+
     </div>
 
   </div>
+  <!-- js読み込み-->
+  <script>
+    window.onload = function () {
+      $('.aside.nav-title').load('aside.html');
+    }
+  </script>
+  <script src="../../javascript/index.js"></script>
 </body>
 
 </html>

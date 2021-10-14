@@ -9,71 +9,139 @@
   <link rel="stylesheet" href="../../css/tag_style.css">
   <link rel="stylesheet" href="../../css/list.css">
   <link rel="stylesheet" href="../../css/table.css">
+  <link rel="stylesheet" href="../../css/navigation.css">
   <link rel="icon" href="../../image/favicon.ico" type="image/vnd.microsoft.icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
+
+  <header>
+    <div class="header-logo">
+      <p><a href="../../html/simple/index.html">
+          <img src="../../image/Yznet_Specification.png" alt="Yznet_Specification" />
+        </a></p>
+    </div>
+    <div class="header-nav toggle_btn">
+      <img src="../../image/barcode.png" alt="barcode" />
+    </div>
+  </header>
+
   <div class="body">
 
+    <div class="aside nav-title">
+      <!-- jQuery -->
+    </div>
+
+    <div class="mask"></div>
+
+    <!-- タイトル -->
     <div class="title">
-      <p>●hindent</p>
+      <p>hindent</p>
     </div>
 
-    <div class="definition">
-
-      <div class="tag-name midashi-inline plain">
-        <p>tag name</p>
-        <p>hindent</p>
-      </div>
-
-      <div class="tag-attribute-label midashi-inline plain">
-        <p>attribute</p>
-        <p>val</p>
-      </div>
-
-      <div class="tag-attribute-value midashi-inline list">
-        <p>attribute-value</p>
-        <ul>
-          <li>0em</li>
-          <li>0em00</li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div class="explanation midashi-block">
-      <p>explanation</p>
+    <!-- 説明 -->
+    <div class="explanation sentence midashi-block">
+      <p>説明</p>
       <p>
         hindentタグは、文章が折り返されたときの折り返しインデントを指定します。
       </p>
     </div>
 
-    <div class="example midashi-block">
-      <p>example</p>
-      <p>
-        &lt;hindent val="3em"&gt;これは長い文章です。これは長い長い文章です。これは長い長い長い文章です。長くて退屈な文章です。内容だけは空っぽです。&lt;/hindent&gt;
-      </p>
-    </div>
+    <!-- 定義 -->
+    <div class="definition-nav nav">property</div>
+    <div class="definition group">
 
-    <div class="illustration midashi-block">
-      <p>illustration</p>
-      <div class="image">
-        <img src="../../image/hindent.jpg" alt="hindent" />
+      <div class="tag-name list chapter">
+        <ul>
+          <li>タグ名称</li>
+          <li>hindent</li>
+        </ul>
       </div>
+
+      <div class="tag-attribute-label list chapter">
+        <ul>
+          <li>属性</li>
+          <li>val</li>
+        </ul>
+      </div>
+
+      <div class="tag-attribute-value list chapter">
+        <ul>
+          <li>属性値</li>
+          <li>0em</li>
+          <li>0em00</li>
+        </ul>
+      </div>
+
+      <div class="tag-attribute-value list chapter">
+        <ul>
+          <li>クラス変形</li>
+          <li>&lt;div class="h-indent-XemXX&gt;</li>
+        </ul>
+      </div>
+
+      <div class="css-property table midashi-block chapter">
+        <p>CSSプロパティ</p>
+        <table>
+          <tbody>
+            <tr>
+              <th>text-indent</th>
+              <th>padding-left ( hltr )</th>
+              <th>padding-top ( vrtl )</th>
+            </tr>
+            <tr>
+              <td>-X.XXem</td>
+              <td>X.XXem</td>
+              <td>X.XXem</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
     </div>
 
-    <div class="point midashi-block">
+    <div class="example-nav nav">example</div>
+    <div class="example-body group">
+
+      <div class="code sentence border-top-dashed midashi-block chapter">
+        <p>Code</p>
+        <p>
+          &lt;hindent
+          val="3em"&gt;これは長い文章です。これは長い長い文章です。これは長い長い長い文章です。長くて退屈な文章です。内容だけは空っぽです。&lt;/hindent&gt;
+        </p>
+      </div>
+
+      <div class="illustration midashi-block border-top-dashed chapter">
+        <p>illustration</p>
+        <div class="image-block">
+          <img src="../../image/hindent.jpg" alt="hindent" />
+          <p>図1: hindent = 3</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="point sentence midashi-block chapter">
       <p>Point</p>
-      <p>indentタグと組み合わせて使用することが一般的です。例えば次のように書きます。
+      <p>indentタグと組み合わせて使用することが可能です。例えば次のように書きます。
       </p>
       <br>
       <p>
         &lt;hindent val="3em"&gt;&lt;indent
         val="1em"&gt;これは長い文章です。これは長い長い文章です。これは長い長い長い文章です。長くて退屈な文章です。内容だけは空っぽです。&lt;/indent&gt;&lt;/hindent&gt;
       </p>
+      <p>
+        <br>
+        また、属性値には、任意の自然数を指定できます。
+        例えば、<br>
+        &lt;hindent val="12em125"&gt;
+        <br>
+        等、
+      </p>
     </div>
 
-    <div class="caution midashi-block">
+    <div class="caution sentence midashi-block chapter">
       <p>Caution</p>
       <p>hindentタグとindentタグを逆順にして使用することはできません。プロパティの書き換え順で最終的な値が変更されてしまうからです。</p>
       <br>
@@ -85,7 +153,13 @@
       <p>これは、text-indentプロパティをhindentが上書きしたことによる現象です。これによってindentタグの効力がなくなっています。</p>
     </div>
 
-  </div>
+    <!-- js読み込み-->
+    <script>
+      window.onload = function () {
+        $('.aside.nav-title').load('aside.html');
+      }
+    </script>
+    <script src="../../javascript/index.js"></script>
 </body>
 
 </html>
