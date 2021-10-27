@@ -5,48 +5,121 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>hrタグの説明</title>
   <link rel="stylesheet" href="../../css/tag_style.css">
+  <link rel="stylesheet" href="../../css/list.css">
+  <link rel="stylesheet" href="../../css/table.css">
+  <link rel="stylesheet" href="../../css/navigation.css">
   <link rel="icon" href="../../image/favicon.ico" type="image/vnd.microsoft.icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
+
+  <header>
+    <div class="header-logo">
+      <p><a href="../../html/simple/index.html">
+          <img src="../../image/Yznet_Specification.png" alt="Yznet_Specification" />
+        </a></p>
+    </div>
+    <div class="header-nav toggle_btn">
+      <img src="../../image/barcode.png" alt="barcode" />
+    </div>
+  </header>
+
   <div class="body">
 
-    <div class="title"><span>●hr</span></div>
-
-    <div class="definition">
-      <p class="tag-name">hr</p>
-      <table class="tag-attribute-label">
-        <tr>
-          <th>attribute</th>
-          <td>class指定</td>
-        </tr>
-      </table>
-      <table class="tag-attribute-value">
-        <tr>
-          <th>attribute-value</th>
-          <td>スタイル指定</td>
-        </tr>
-      </table>
+    <div class="aside nav-title">
+      <!-- jQuery -->
     </div>
 
-    <div class="description">
-      <p class="explanation">
+    <div class="mask"></div>
+
+    <!-- タイトル -->
+    <div class="title">
+      <p>hr</p>
+    </div>
+
+    <!-- 説明 -->
+    <div class="explanation sentence midashi-block">
+      <p>説明</p>
+      <p>
         hrタグは、段落等を区切りたい場合に使用します。
       </p>
-      <div class="example">
-        <p>
-          &lt;p&gt;〈ゴメン。帰り、ちょっと遅くなる〉&lt;/p&gt;
-        </p>
-        &lt;hr /&gt;
-        <p>
-          &lt;p&gt;　中二の娘、ひかりからのＬＩＮＥだった。&lt;/p&gt;
+    </div>
+
+    <!-- 定義 -->
+    <div class="definition-nav nav">property</div>
+    <div class="definition group">
+
+      <div class="tag-name list chapter">
+        <ul>
+          <li>タグ名称</li>
+          <li>hr</li>
+        </ul>
+      </div>
+
+      <div class="tag-attribute-label list chapter">
+        <ul>
+          <li>属性</li>
+          <li>class指定</li>
+        </ul>
+      </div>
+
+      <div class="tag-attribute-value list chapter">
+        <ul>
+          <li>クラス変形</li>
+          <li>なし</li>
+        </ul>
+      </div>
+
+      <div class="css-property table midashi-block chapter">
+        <p>CSSプロパティ</p>
+        <table>
+          <tbody>
+            <tr>
+              <th>hr</th>
+              <th>.hltr hr(横組み)</th>
+              <th>.vrtl hr(縦組み)</th>
+            </tr>
+            <tr>
+              <td>border-width: 1px</td>
+              <td>margin: 0.5em 0</td>
+              <td>margin: 0 0.5em</td>
+            </tr>
+            <tr>
+              <td>border-color: #000000</td>
+              <td>border-style: solid none none none</td>
+              <td>border-style: none solid none none</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <div class="example-nav nav">example</div>
+    <div class="example-body group">
+
+      <div class="code sentence border-top-dashed midashi-block chapter">
+        <p>Code</p>
+        <p>&lt;p&gt;同様に、悲しみそのものを、それが悲しみであるという理由で愛する者や、それゆえ得ようとする者は、どこにもいない。&lt;/p&gt;
+          <br>
+          &lt;hr /&gt;
+          <br>
+          &lt;p&gt;同様に、悲しみそのものを、それが悲しみであるという理由で愛する者や、それゆえ得ようとする者は、どこにもいない。&lt;/p&gt;
         </p>
       </div>
-      <div class="image">
-        <img src="../../image/hr.jpg" />
+
+      <div class="illustration midashi-block border-top-dashed chapter">
+        <p>illustration</p>
+        <div class="image-block">
+          <img src="../../image/hr.jpg" alt="hindent" />
+          <p>図1: hr</p>
+        </div>
+
       </div>
+
     </div>
 
   </div>

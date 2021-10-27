@@ -69,15 +69,15 @@
       <div class="tag-attribute-value list chapter">
         <ul>
           <li>属性値</li>
-          <li>0em</li>
-          <li>0em00</li>
+          <li>Xem</li>
+          <li>XemXX</li>
         </ul>
       </div>
 
       <div class="tag-attribute-value list chapter">
         <ul>
           <li>クラス変形</li>
-          <li>&lt;div class="h-indent-XemXX&gt;</li>
+          <li>&lt;div class="h-indent-XemXX"&gt;</li>
         </ul>
       </div>
 
@@ -143,6 +143,8 @@
 
     <div class="caution sentence midashi-block chapter">
       <p>Caution</p>
+      <p style="font-weight: bold;">hindentタグとindentタグの組み合わせで段落を表現することは非推奨です。代わりにstartタグを使用することが推奨されています。</p>
+      <br>
       <p>hindentタグとindentタグを逆順にして使用することはできません。プロパティの書き換え順で最終的な値が変更されてしまうからです。</p>
       <br>
       <p>例えば、下のように書いたとします。</p>
@@ -160,6 +162,7 @@
       }
     </script>
     <script src="../../javascript/index.js"></script>
+  </div>
 </body>
 
 </html>

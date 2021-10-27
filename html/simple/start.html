@@ -9,72 +9,120 @@
   <link rel="stylesheet" href="../../css/tag_style.css">
   <link rel="stylesheet" href="../../css/list.css">
   <link rel="stylesheet" href="../../css/table.css">
+  <link rel="stylesheet" href="../../css/navigation.css">
   <link rel="icon" href="../../image/favicon.ico" type="image/vnd.microsoft.icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
+
+  <header>
+    <div class="header-logo">
+      <p><a href="../../html/simple/index.html">
+          <img src="../../image/Yznet_Specification.png" alt="Yznet_Specification" />
+        </a></p>
+    </div>
+    <div class="header-nav toggle_btn">
+      <img src="../../image/barcode.png" alt="barcode" />
+    </div>
+  </header>
+
   <div class="body">
 
+    <div class="aside nav-title">
+      <!-- jQuery -->
+    </div>
+
+    <div class="mask"></div>
+
+    <!-- タイトル -->
     <div class="title">
       <p>start</p>
     </div>
 
-    <div class="explanation midashi-block">
+    <!-- 説明 -->
+    <div class="explanation sentence midashi-block">
       <p>説明</p>
       <p>
         startタグは、字下げに使用します。
       </p>
     </div>
-    <div class="definition-nav">
-      <p>property</p>
-    </div>
-    <div class="definition">
 
-      <div class="tag-name midashi-inline plain">
-        <p>タグ名称</p>
-        <p>start</p>
-      </div>
+    <!-- 定義 -->
+    <div class="definition-nav nav">property</div>
+    <div class="definition group">
 
-      <div class="tag-attribute-label midashi-inline plain">
-        <p>属性</p>
-        <p>val</p>
-      </div>
-
-      <div class="tag-attribute-value midashi-inline list">
-        <p>属性値</p>
+      <div class="tag-name list chapter">
         <ul>
-          <li>[1-9]*[0-9]+em[0-9]*</li>
+          <li>タグ名称</li>
+          <li>start</li>
         </ul>
       </div>
 
-      <div class="translation midashi-inline plain">
-        <p>クラス変形</p>
-        <p> (.vrtl | .hltr) .start-XemYY</p>
-      </div>
-
-      <div class="stylesheet-property midashi-inline list">
-        <p>スタイルシートプロパティ</p>
+      <div class="tag-attribute-label list chapter">
         <ul>
-          <li>margin-(left | top): X.YYem</li>
+          <li>属性</li>
+          <li>val</li>
         </ul>
       </div>
 
-    </div>
-
-    <div class="example midashi-block">
-      <p>example</p>
-      <p>
-        &lt;start val="1em125"&gt;これは長い文章です。これは長い長い文章です。これは長い長い長い文章です。長くて退屈な文章です。内容だけは空っぽです。&lt;/start&gt;
-        <br>
-        &lt;p&gt;これは長い文章です。これは長い長い文章です。これは長い長い長い文章です。長くて退屈な文章です。内容だけは空っぽです。&lt;/p&gt;
-      </p>
-    </div>
-
-    <div class="illustration midashi-block">
-      <p>illustration</p>
-      <div class="image">
-        <img src="../../image/start.jpg" alt="start" />
+      <div class="tag-attribute-value list chapter">
+        <ul>
+          <li>属性値</li>
+          <li>Xem</li>
+          <li>XemXX</li>
+        </ul>
       </div>
+
+      <div class="tag-attribute-value list chapter">
+        <ul>
+          <li>クラス変形</li>
+          <li>&lt;div class="start-XemXX"&gt;</li>
+        </ul>
+      </div>
+
+      <div class="css-property table midashi-block chapter">
+        <p>CSSプロパティ</p>
+        <table>
+          <tbody>
+            <tr>
+              <th>.start-XemXX</th>
+            </tr>
+            <tr>
+              <td>margin-top: X.XXem</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+
+
+    <div class="example-nav nav">example</div>
+    <div class="example-body group">
+
+      <div class="code sentence border-top-dashed midashi-block chapter">
+        <p>Code</p>
+        <p>
+          &lt;start val="2em"&gt;
+          <br>
+          &lt;p&gt;いろはにほへと、ちりぬるを、わかよたれそ、つねならむ。うゐのおくやま、けふこえて、あさきゆめみし、ゑひもせす。&lt;/p&gt;
+          <br>
+          &lt;/start&gt;
+          <br>
+          &lt;p&gt;いろはにほへと、ちりぬるを、わかよたれそ、つねならむ。うゐのおくやま、けふこえて、あさきゆめみし、ゑひもせす。&lt;/p&gt;
+        </p>
+      </div>
+
+      <div class="illustration midashi-block border-top-dashed chapter">
+        <p>illustration</p>
+        <div class="image-block">
+          <img src="../../image/start.jpg" alt="start" />
+          <p>図1: start val=2em</p>
+        </div>
+      </div>
+
     </div>
 
   </div>
