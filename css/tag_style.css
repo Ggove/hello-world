@@ -62,6 +62,7 @@ header img{
 /* chapter */
 .chapter{
   margin: 2rem 0;
+  margin-left: 1rem;
 }
 
 /* title */
@@ -235,4 +236,67 @@ header img{
 
 .point p:first-child{
   color:tan;
+}
+
+/* 追加(電書協スタイル) */
+/* div系で指定 */
+
+.guide{
+  margin: 0;
+}
+
+.theme{
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.theme::before{
+  content: "・";
+  font-weight: bold;
+}
+
+.details{
+  color: #444;
+}
+
+.details p:not(:first-child){
+  margin-left: 2rem;
+}
+
+.details p:first-child::before{
+  content: '【';
+}
+
+.details p:first-child::after{
+  content: '】';
+}
+
+.exp{
+  color: #444;
+  margin-bottom: 1rem;
+}
+.exp::before{
+  content: '例)';
+  margin-right: 1rem;
+}
+
+.sample-code{
+  position: relative;
+  display: inline-block;
+  border-top: 2px dashed #777;
+  border-bottom: 2px dashed #777;
+  padding: 1rem 0;
+}
+
+.sample-code::after{
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  content: "[sample code]";
+  color: #333;
+  font-size: 100%;
+  transform: translateX(-50%);
+  background-color: #FFFFF3;
+  padding: 0 1em;
+  white-space: nowrap;
 }
